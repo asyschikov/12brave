@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=19">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
       <a href="#team">Team</a>
       <a href="#testimonials">Testimonials</a>
     </div>
-    <a href="#" class="nav-cta">Book idea clarity call</a>
+    <a href="#" class="nav-cta" data-popup="clarity">Book idea clarity call</a>
   </div>
 </nav>
 
@@ -41,7 +41,7 @@
       </div>
       <div class="hero-buttons">
         <a href="#program" class="btn-dark">See curriculum</a>
-        <a href="#" class="btn-outline">Book idea clarity call →</a>
+        <a href="#" class="btn-outline" data-popup="clarity">Book idea clarity call →</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -72,12 +72,12 @@
     </div>
     <div class="hero-right">
       <div class="hero-card-wrapper">
-        <div class="hero-card"><img src="assets/images/hero1.jpg" alt=""></div>
-        <div class="hero-card"><img src="assets/images/hero-group5.png" alt=""></div>
-        <div class="hero-card"><img src="assets/images/hero-group2-2.png" alt=""></div>
-        <div class="hero-card"><img src="assets/images/hero-frame.jpg" alt=""></div>
-        <div class="hero-card"><img src="assets/images/hero-group2.png" alt=""></div>
-        <div class="hero-card"><img src="assets/images/hero-group3.png" alt=""></div>
+        <div class="hero-card"><div class="hero-card-inner"><img src="assets/images/hero1.jpg" alt=""><p class="hero-card-title">Gain first paying customers</p></div></div>
+        <div class="hero-card"><div class="hero-card-inner"><img src="assets/images/hero-group5.png" alt=""><p class="hero-card-title">3-4 tested MVP experiments with real user feedback</p></div></div>
+        <div class="hero-card"><div class="hero-card-inner"><img src="assets/images/hero-group2-2.png" alt=""><p class="hero-card-title">One ready-to-grow product or service</p></div></div>
+        <div class="hero-card"><div class="hero-card-inner"><img src="assets/images/hero-frame.jpg" alt=""><p class="hero-card-title">Get expert mentoring from senior professionals</p></div></div>
+        <div class="hero-card"><div class="hero-card-inner"><img src="assets/images/hero-group2.png" alt=""><p class="hero-card-title">Work hands-on every week with frameworks, tools and feedback</p></div></div>
+        <div class="hero-card"><div class="hero-card-inner"><img src="assets/images/hero-group3.png" alt=""><p class="hero-card-title">Grow your network with like-minded people</p></div></div>
       </div>
     </div>
   </div>
@@ -181,39 +181,43 @@
       <img src="assets/images/testimonial-fernando.jpg" alt="">
       <img src="assets/images/testimonial-nadzeya.jpg" alt="">
       <img src="assets/images/testimonial-bogdan.jpg" alt="">
+      <img src="assets/team/victoria.jpg" alt="">
     </div>
     <div class="testimonials-rating">
-      <img src="assets/stars.svg" alt="5 stars"> 5.0
+      <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0
     </div>
   </div>
   <div class="testimonials-grid">
     <div class="testimonial-card">
       <div class="testimonial-author">
         <img src="assets/images/testimonial-fernando.jpg" alt="Fernando" class="testimonial-avatar">
-        <div>
+        <div class="testimonial-author-info">
           <div class="testimonial-name">Fernando Founar</div>
           <div class="testimonial-role">Executive MBA, D365 Lead consultant</div>
         </div>
+        <img src="assets/images/logo-hso.png" alt="HSO" class="testimonial-company-logo">
       </div>
-      <div class="testimonial-text">&laquo;Thanks for the push. In just a month I went from "what if" to actually moving on my side business. I've got a name, a landing page and even the first leads&raquo;</div>
+      <div class="testimonial-text">&laquo;Thanks for the push. In just a month I went from "what if" to actually moving on my side business. I've got a name, a landing page and even the first leads&nbsp;&raquo;</div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-author">
         <img src="assets/images/testimonial-nadzeya.jpg" alt="Nadzeya" class="testimonial-avatar">
-        <div>
+        <div class="testimonial-author-info">
           <div class="testimonial-name">Nadzeya Bulakh</div>
           <div class="testimonial-role">Operational Excellence</div>
         </div>
+        <img src="assets/images/logo-coface.jpg" alt="Coface" class="testimonial-company-logo">
       </div>
       <div class="testimonial-text">&laquo;The instructors are consistently available between sessions, ensuring you feel supported throughout&raquo;</div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-author">
         <img src="assets/images/testimonial-bogdan.jpg" alt="Bogdan" class="testimonial-avatar">
-        <div>
+        <div class="testimonial-author-info">
           <div class="testimonial-name">Bogdan Arizancu</div>
           <div class="testimonial-role">Software Developer</div>
         </div>
+        <img src="assets/images/logo-manhattan-m.png" alt="Manhattan" class="testimonial-company-logo">
       </div>
       <div class="testimonial-text">&laquo;The mentors were amazing...and the peer community. It is honestly exactly what I needed to finally move from just having ideas to actually taking action on them&raquo;</div>
     </div>
@@ -264,44 +268,58 @@
   </div>
   <div class="cta-banner-inner">
     <h2>I want to test my idea<br>and get customers</h2>
-    <a href="#" class="btn-dark">Book idea clarity call</a>
+    <a href="#" class="btn-dark" data-popup="clarity">Book idea clarity call</a>
   </div>
 </section>
 
 <!-- ===== REAL SIDE BUSINESSES SLIDER ===== -->
 <section class="slider-section">
   <h2>Real Side Businesses<br>Our Alumni Started</h2>
-  <div class="swiper is-prime">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="swiper-slide-card">
-          <div class="slide-card-title">LingoLyft</div>
-          <div class="slide-card-desc">LingoLyft is a tool for YouTube content creators that automates the metadata upload and translation to different languages.</div>
+  <div class="slider-container">
+    <div class="swiper is-prime">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swiper-slide-card">
+            <img src="assets/images/slides/lingolyft.webp" alt="LingoLyft" class="slide-card-img">
+            <div class="slide-card-text">
+              <div class="slide-card-title">LingoLyft</div>
+              <div class="slide-card-desc">LingoLyft is a tool for YouTube content creators that automates the metadata upload and translation to different languages.</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swiper-slide-card">
-          <div class="slide-card-title">The Needless</div>
-          <div class="slide-card-desc">Personal finance and wealth management tracker</div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-card">
+            <img src="assets/images/slides/needless.png" alt="The Needless" class="slide-card-img">
+            <div class="slide-card-text">
+              <div class="slide-card-title">The Needless</div>
+              <div class="slide-card-desc">Personal finance and wealth management tracker</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swiper-slide-card">
-          <div class="slide-card-title">WhatsApp Business Bot</div>
-          <div class="slide-card-desc">WhatsApp full cycle sales communication automation service</div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-card">
+            <img src="assets/images/slides/whatsapp-bot.webp" alt="WhatsApp Business Bot" class="slide-card-img">
+            <div class="slide-card-text">
+              <div class="slide-card-title">WhatsApp Business Bot</div>
+              <div class="slide-card-desc">WhatsApp full cycle sales communication automation service</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swiper-slide-card">
-          <div class="slide-card-title">Stagewise 360</div>
-          <div class="slide-card-desc">Personal Leadership coaching communication program for middle managers to help them transform into influential leaders</div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-card">
+            <img src="assets/images/slides/stagewise.webp" alt="Stagewise 360" class="slide-card-img">
+            <div class="slide-card-text">
+              <div class="slide-card-title">Stagewise 360</div>
+              <div class="slide-card-desc">Personal Leadership coaching communication program for middle managers to help them transform into influential leaders</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="slider-nav">
-    <button class="slider-prev"><img src="assets/icons/left-arrow.svg" alt="Previous"></button>
-    <button class="slider-next"><img src="assets/icons/right-arrow.svg" alt="Next"></button>
+  <div class="slider-arrows">
+    <button class="slider-arrow slider-prev"><img src="assets/icons/left-arrow.svg" alt="Previous"></button>
+    <button class="slider-arrow slider-next"><img src="assets/icons/right-arrow.svg" alt="Next"></button>
   </div>
 </section>
 
@@ -314,11 +332,13 @@
       <div class="speaker-photo">
         <img src="assets/team/victoria.jpg" alt="Victoria Sheer">
         <img src="assets/team/victoria-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/victoriasheer/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/victoriasheer/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Victoria Sheer</div>
-        <div class="speaker-location">Amsterdam</div>
+        <div class="speaker-name-row">
+          <div class="speaker-name">Victoria Sheer</div>
+          <div class="speaker-location">Amsterdam</div>
+        </div>
         <div class="speaker-bio">
           <p>12+ years in Product Leadership (SAP, Henkel, Aldi Sud).</p>
           <p>Portfolio Career since 2019 (100+ paid mentorings, 30+ trainings, consulting practice, community builder).</p>
@@ -330,11 +350,16 @@
       <div class="speaker-photo">
         <img src="assets/team/ekaterina.jpg" alt="Ekaterina Servetnik">
         <img src="assets/team/ekaterina-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/ekaterina-servetnik/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/ekaterina-servetnik/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Ekaterina Servetnik</div>
-        <div class="speaker-location">Dusseldorf</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Ekaterina Servetnik</div>
+
+          <div class="speaker-location">Dusseldorf</div>
+
+        </div>
         <div class="speaker-bio">
           <p>17+ years in consulting, CX, digital & strategy.</p>
           <p>Go-to-market advisor for startups & scale-ups (SaaS, AI driven)</p>
@@ -346,11 +371,16 @@
       <div class="speaker-photo">
         <img src="assets/team/florian.jpg" alt="Florian Klein">
         <img src="assets/team/florian-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/florianklein" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/florianklein" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Florian Klein</div>
-        <div class="speaker-location">Allgau</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Florian Klein</div>
+
+          <div class="speaker-location">Allgau</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Former global head of Strategic Foresight of a Big4 firm.</p>
           <p>Co-Founder of ananki.ai, world's first automated neural-AI foresight engine.</p>
@@ -362,11 +392,16 @@
       <div class="speaker-photo">
         <img src="assets/team/artem.jpg" alt="Artem Koren">
         <img src="assets/team/artem-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/akoren/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/akoren/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Artem Koren</div>
-        <div class="speaker-location">New York City</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Artem Koren</div>
+
+          <div class="speaker-location">New York City</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Co-founder and Chief Product Officer at Sembly AI (2M ARR)</p>
           <p>BS in Computer Science (Columbia University) and MBA (NYU Stern)</p>
@@ -378,11 +413,16 @@
       <div class="speaker-photo">
         <img src="assets/team/nils.jpg" alt="Nils Stotz">
         <img src="assets/team/nils-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/nilsstotz/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/nilsstotz/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Nils Stotz</div>
-        <div class="speaker-location">Berlin</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Nils Stotz</div>
+
+          <div class="speaker-location">Berlin</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Head of Product - Experimentation at Zalando.</p>
           <p>Published 3 Books. Created 3 Online-Courses with 1,500+ Students</p>
@@ -394,11 +434,16 @@
       <div class="speaker-photo">
         <img src="assets/team/maria.jpg" alt="Maria Ledentsova">
         <img src="assets/team/maria-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/marialeden" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/marialeden" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Maria Ledentsova</div>
-        <div class="speaker-location">Berlin</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Maria Ledentsova</div>
+
+          <div class="speaker-location">Berlin</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Founding marketer at a design agency - drove 2x+ revenue growth.</p>
           <p>Grew LinkedIn personal brand to 18k+ followers.</p>
@@ -410,11 +455,16 @@
       <div class="speaker-photo">
         <img src="assets/team/clyde.jpg" alt="Clyde Araujo">
         <img src="assets/team/clyde-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/araujoclyde/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/araujoclyde/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Clyde Araujo</div>
-        <div class="speaker-location">Koblenz</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Clyde Araujo</div>
+
+          <div class="speaker-location">Koblenz</div>
+
+        </div>
         <div class="speaker-bio">
           <p>15+ years global business leadership experience at Henkel, Metro, Huawei</p>
           <p>Startup Advisor on Martech, Data Monetisation and IoT</p>
@@ -426,11 +476,16 @@
       <div class="speaker-photo">
         <img src="assets/team/joao.jpg" alt="Joao Moita">
         <img src="assets/team/joao-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/joaomoita/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/joaomoita/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Joao Moita</div>
-        <div class="speaker-location">Lisbon</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Joao Moita</div>
+
+          <div class="speaker-location">Lisbon</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Community Builder and Entrepreneur</p>
           <p>Founder of Product Weekend community live in 15+ countries</p>
@@ -442,11 +497,16 @@
       <div class="speaker-photo">
         <img src="assets/team/catia.jpg" alt="Catia Nunes">
         <img src="assets/team/catia-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/catiacnunes/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/catiacnunes/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Catia Nunes</div>
-        <div class="speaker-location">Lisbon</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Catia Nunes</div>
+
+          <div class="speaker-location">Lisbon</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Growth and Performance Marketing Leader with over 10 years of experience</p>
         </div>
@@ -457,11 +517,16 @@
       <div class="speaker-photo">
         <img src="assets/team/ayushman.jpg" alt="Ayushman de Lang-Talwar">
         <img src="assets/team/ayushman-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/ayushmantalwar/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/ayushmantalwar/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Ayushman de Lang-Talwar</div>
-        <div class="speaker-location">Amsterdam</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Ayushman de Lang-Talwar</div>
+
+          <div class="speaker-location">Amsterdam</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Cofounded Hable - accessibility startup (exited)</p>
           <p>Led multiple products to +&euro;xxM revenue</p>
@@ -473,11 +538,16 @@
       <div class="speaker-photo">
         <img src="assets/team/ruzgar.jpg" alt="Ruzgar Zere">
         <img src="assets/team/ruzgar-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/rzere/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/rzere/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Ruzgar Zere</div>
-        <div class="speaker-location">Tallinn</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Ruzgar Zere</div>
+
+          <div class="speaker-location">Tallinn</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Built and scaled a B2B SaaS to 350+ paying customers</p>
           <p>Shipped and operated the product end-to-end as a solo founder</p>
@@ -489,11 +559,16 @@
       <div class="speaker-photo">
         <img src="assets/team/andrey.jpg" alt="Andrey Dyatlov">
         <img src="assets/team/andrey-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/thelacker/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/thelacker/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Andrey Dyatlov</div>
-        <div class="speaker-location">Paris</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Andrey Dyatlov</div>
+
+          <div class="speaker-location">Paris</div>
+
+        </div>
         <div class="speaker-bio">
           <p>CEO and Founder of Rapid Delivery Analytics</p>
           <p>His clients include PepsiCo, Unilever, Volkswagen and Ferrero.</p>
@@ -505,11 +580,16 @@
       <div class="speaker-photo">
         <img src="assets/team/elena.jpg" alt="Elena Zhigalina">
         <img src="assets/team/elena-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/elena-zhigalina/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/elena-zhigalina/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Elena Zhigalina</div>
-        <div class="speaker-location">Madrid</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Elena Zhigalina</div>
+
+          <div class="speaker-location">Madrid</div>
+
+        </div>
         <div class="speaker-bio">
           <p>15+ years in B2C & B2B marketing</p>
           <p>MBA in Marketing & Innovation. Angel investor and Advisor</p>
@@ -521,11 +601,16 @@
       <div class="speaker-photo">
         <img src="assets/team/leon.jpg" alt="Leon Wisskirchen">
         <img src="assets/team/leon-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/leon-wisskirchen" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/leon-wisskirchen" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
       </div>
       <div class="speaker-info">
-        <div class="speaker-name">Leon Wisskirchen</div>
-        <div class="speaker-location">Berlin</div>
+        <div class="speaker-name-row">
+
+          <div class="speaker-name">Leon Wisskirchen</div>
+
+          <div class="speaker-location">Berlin</div>
+
+        </div>
         <div class="speaker-bio">
           <p>Serial entrepreneur and Velsa Co-Founder & CEO</p>
           <p>Thought Leader in Legal Tech</p>
@@ -657,7 +742,7 @@
   <div class="program-final">
     <h3>You will finally have your idea live and used by real people</h3>
     <p>With 8-10 hours per week on your own project, you'll finish with a validated idea, your first customers, and a clear go-to-market plan</p>
-    <a href="#" class="btn-white">I am interested to sign up</a>
+    <a href="#" class="btn-white" data-popup="clarity">I am interested to sign up</a>
   </div>
 </section>
 
@@ -748,10 +833,25 @@
   </div>
 </footer>
 
+<!-- ===== BOOK A CALL POPUP ===== -->
+<div class="popup-overlay" id="popup-clarity" style="display:none">
+  <div class="popup-card">
+    <div class="popup-content">
+      <img src="assets/logo.svg" alt="12BRAVE" class="popup-logo">
+      <div class="popup-title">BOOK A FREE IDEA CLARITY CALL WITH 12BRAVE FOUNDERS</div>
+      <div class="popup-desc">This is a call where we will tell you more about the program and discuss if your case is a good fit. The call is free and a mandatory step before joining the program</div>
+      <div class="calendly-embed">
+        <iframe data-src="https://calendly.com/12brave/new-meeting?hide_event_type_details=1&amp;hide_gdpr_banner=1&amp;primary_color=8238fd" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe>
+      </div>
+    </div>
+    <button class="popup-close" id="popup-close" aria-label="Close">&times;</button>
+  </div>
+</div>
+
 <!-- ===== SCRIPTS ===== -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="scripts.js"></script>
+<script src="scripts.js?v=3"></script>
 </body>
 </html>

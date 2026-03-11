@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProgramAccordion();
   initFaqAccordion();
   initSwiper();
+  initBookCallPopup();
 });
 
 /* ================================================================
@@ -221,5 +222,51 @@ function initSwiper() {
     breakpoints: {
       480: { slidesPerView: 2 }
     }
+  });
+}
+
+/* ================================================================
+   BOOK A CALL POPUP
+   ================================================================ */
+function initBookCallPopup() {
+  const overlay = document.getElementById('popup-clarity');
+  const closeBtn = document.getElementById('popup-close');
+  if (!overlay) return;
+
+  const iframe = overlay.querySelector('.calendly-embed iframe');
+
+  function openPopup() {
+    // Lazy-load Calendly iframe on first open
+    if (iframe && iframe.dataset.src && !iframe.getAttribute('src')) {
+      iframe.src = iframe.dataset.src;
+    }
+    overlay.style.display = 'flex';
+    document.body.classList.add('popup-open');
+  }
+
+  function closePopup() {
+    overlay.style.display = 'none';
+    document.body.classList.remove('popup-open');
+  }
+
+  // Wire up all buttons with data-popup="clarity"
+  document.querySelectorAll('[data-popup="clarity"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPopup();
+    });
+  });
+
+  // Close button
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+  // Click overlay background to close
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.style.display === 'flex') closePopup();
   });
 }
