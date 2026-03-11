@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initNavbar();
   initHeroTitleAnimation();
-  initCardStackAnimation();
+  initHeroTestimonialRotation();
   initSectionFadeAnimations();
   initProgramAccordion();
   initFaqAccordion();
@@ -44,82 +44,21 @@ function initHeroTitleAnimation() {
 }
 
 /* ================================================================
-   HERO CARD STACK – Rotating card deck animation
+   HERO TESTIMONIAL ROTATION – Rotating testimonial cards
    ================================================================ */
-function initCardStackAnimation() {
-  if (window.innerWidth < 768) return;
-
-  const cards = document.querySelectorAll('.hero-card-wrapper > .hero-card');
+function initHeroTestimonialRotation() {
+  const cards = document.querySelectorAll('.hero-testimonial-card');
   if (cards.length === 0) return;
 
   let currentIndex = 0;
-  const cfg = {
-    offsetX: 28,
-    offsetY: 7,
-    rotation: 3,
-    maxCards: 6,
-    speed: 0.5,
-    interval: 2500
-  };
 
-  // Set initial stack positions
-  cards.forEach((card, i) => {
-    const pos = Math.min(i, cfg.maxCards - 1);
-    gsap.set(card, {
-      x: pos * cfg.offsetX,
-      y: pos * cfg.offsetY,
-      rotation: pos * cfg.rotation,
-      zIndex: cards.length - i,
-      transformOrigin: 'center center'
-    });
-  });
-
-  // Cycle top card to back
   function cycle() {
-    if (window.innerWidth < 768) return;
-
-    const topCard = cards[currentIndex];
-    gsap.to(topCard, {
-      duration: cfg.speed,
-      x: 400, y: -50, rotation: 25, opacity: 0,
-      ease: 'power2.inOut',
-      onComplete: () => {
-        const lastPos = Math.min(cards.length - 1, cfg.maxCards - 1);
-        gsap.set(topCard, {
-          x: lastPos * cfg.offsetX,
-          y: lastPos * cfg.offsetY,
-          rotation: lastPos * cfg.rotation,
-          opacity: 1, zIndex: 0
-        });
-        currentIndex = (currentIndex + 1) % cards.length;
-      }
-    });
-
-    cards.forEach((card, i) => {
-      if (i === currentIndex) return;
-      const curPos = (i - currentIndex + cards.length) % cards.length;
-      const newPos = Math.max(0, curPos - 1);
-      const stackPos = Math.min(newPos, cfg.maxCards - 1);
-      gsap.to(card, {
-        duration: cfg.speed,
-        x: stackPos * cfg.offsetX,
-        y: stackPos * cfg.offsetY,
-        rotation: stackPos * cfg.rotation,
-        zIndex: cards.length - newPos,
-        ease: 'power2.inOut',
-        delay: 0.1
-      });
-    });
+    cards[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % cards.length;
+    cards[currentIndex].classList.add('active');
   }
 
-  setInterval(cycle, cfg.interval);
-
-  // Cleanup on resize to mobile
-  window.addEventListener('resize', () => {
-    if (window.innerWidth < 768) {
-      cards.forEach(card => gsap.set(card, { clearProps: 'all' }));
-    }
-  });
+  setInterval(cycle, 3500);
 }
 
 /* ================================================================
@@ -130,15 +69,14 @@ function initSectionFadeAnimations() {
 
   const selectors = [
     '.hero-section',
-    '.benefits-bar',
     '.what-you-section',
+    '.why-built-section',
     '.participants-section',
     '.testimonials-section',
-    '.what-you-get-section',
-    '.cta-banner',
     '.slider-section',
     '.speaker-section',
     '.program-section',
+    '.packages-section',
     '.faq-section',
     '.community-section'
   ];
