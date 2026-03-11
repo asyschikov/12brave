@@ -271,10 +271,10 @@ button { font-family: inherit; cursor: pointer; }
   max-width: 700px; margin-bottom: 10px;
 }
 .what-you-grid {
-  display: flex; flex-direction: column; gap: 10px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
 }
 .what-you-row {
-  display: flex; gap: 10px;
+  display: contents;
 }
 .what-you-card {
   background: #f9f9f9; border-radius: 12px; padding: 24px 20px;
@@ -656,39 +656,82 @@ button { font-family: inherit; cursor: pointer; }
    WHY WE BUILT THIS
    ================================================================ */
 .why-built-section {
-  padding: 100px 50px;
+  padding: 0 50px;
   max-width: 1200px; margin: 0 auto;
-  background: #fff;
 }
-.why-built-inner {
-  max-width: 1000px; margin: 0 auto;
+.why-built-story {
+  background: #e8daf7;
+  border-radius: 20px;
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.why-built-story-text {
+  position: relative; z-index: 1;
 }
 .why-built-title {
-  font-size: 48px; font-weight: 600; margin-bottom: 24px;
-  text-align: center;
+  font-size: 42px; font-weight: 700; margin-bottom: 24px;
+  text-align: left; color: #131313; line-height: 1.15;
 }
 .why-built-text {
-  font-size: 18px; color: #555; line-height: 1.7;
-  margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;
+  font-size: 16px; color: #333; line-height: 1.7;
 }
 .why-built-text p { margin-bottom: 16px; }
+.why-built-flower {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+}
+.why-built-flower img {
+  width: 100%; max-width: 450px; height: auto;
+}
+/* CSS-only 3D flower fallback */
+.flower-visual {
+  width: 400px; height: 400px;
+  position: relative;
+}
+.flower-petal {
+  position: absolute;
+  width: 120px; height: 200px;
+  background: linear-gradient(135deg, #8a4dff 0%, #6e35d8 50%, #5a28b8 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  top: 50%; left: 50%;
+  transform-origin: 50% 100%;
+}
+.flower-petal:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); }
+.flower-petal:nth-child(2) { transform: translate(-50%, -100%) rotate(36deg); }
+.flower-petal:nth-child(3) { transform: translate(-50%, -100%) rotate(72deg); }
+.flower-petal:nth-child(4) { transform: translate(-50%, -100%) rotate(108deg); }
+.flower-petal:nth-child(5) { transform: translate(-50%, -100%) rotate(144deg); }
+.flower-petal:nth-child(6) { transform: translate(-50%, -100%) rotate(180deg); }
+.flower-petal:nth-child(7) { transform: translate(-50%, -100%) rotate(216deg); }
+.flower-petal:nth-child(8) { transform: translate(-50%, -100%) rotate(252deg); }
+.flower-petal:nth-child(9) { transform: translate(-50%, -100%) rotate(288deg); }
+.flower-petal:nth-child(10) { transform: translate(-50%, -100%) rotate(324deg); }
+
 .founders-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
 }
 .founder-card {
-  background: #f9f9f9; border-radius: 20px; overflow: hidden;
+  background: #f5f0fa; border-radius: 20px; overflow: hidden;
 }
+.founder-photo { padding: 28px 28px 0; }
 .founder-photo img {
-  width: 100%; height: 300px; object-fit: cover; display: block;
+  width: 240px; height: 240px; object-fit: cover; display: block;
+  border-radius: 12px;
 }
 .founder-info { padding: 28px; }
 .founder-name-row {
   display: flex; justify-content: space-between; align-items: baseline;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
-.founder-name { font-size: 22px; font-weight: 600; color: #131313; }
-.founder-location { font-size: 14px; color: #666; }
-.founder-bio { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 16px; }
+.founder-name { font-size: 20px; font-weight: 600; color: #131313; }
+.founder-location { font-size: 14px; color: #888; }
+.founder-bio { font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 16px; margin-top: 16px; }
 .founder-bio p { margin-bottom: 0; }
 .founder-badges {
   display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
@@ -999,8 +1042,11 @@ body.popup-open { overflow: hidden; }
   .program-final { padding: 30px 20px; }
   .founders-grid { grid-template-columns: 1fr; }
   .packages-grid { grid-template-columns: 1fr; }
+  .why-built-story { grid-template-columns: 1fr; padding: 50px 30px; }
+  .why-built-flower { display: none; }
   .why-built-title { font-size: 36px; }
   .packages-title { font-size: 36px; }
+  .what-you-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
