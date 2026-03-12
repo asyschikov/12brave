@@ -1,2 +1,7 @@
 .playwright-mcp/
 .serena/
+# Root-level screenshots (dev artifacts)
+/*.png
+/*.jpeg
+/*.jpg
+/*.py
