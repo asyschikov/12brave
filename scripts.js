@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
   initCurriculumPopup();
+  initContactPopup();
   initNavbar();
   initHeroTitleAnimation();
   initHeroTestimonialRotation();
@@ -427,13 +428,17 @@ function initSwiper() {
       prevEl: '.slider-prev'
     },
     breakpoints: {
-      768: {
-        slidesPerView: 2,
+      480: {
+        slidesPerView: 1.2,
         spaceBetween: 16
       },
+      768: {
+        slidesPerView: 2.2,
+        spaceBetween: 20
+      },
       1024: {
-        slidesPerView: 2,
-        spaceBetween: 16
+        slidesPerView: 3,
+        spaceBetween: 24
       }
     }
   });
@@ -540,6 +545,46 @@ function initAlumniPopup() {
   });
 
   // Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.style.display === 'flex') {
+      closePopup();
+    }
+  });
+}
+
+/* ================================================================
+   CONTACT POPUP
+   ================================================================ */
+function initContactPopup() {
+  const overlay = document.getElementById('popup-contact');
+  const closeBtn = document.getElementById('contact-close');
+  const triggerBtns = document.querySelectorAll('[data-popup="contact"]');
+
+  if (!overlay || triggerBtns.length === 0) return;
+
+  function openPopup() {
+    overlay.style.display = 'flex';
+    document.body.classList.add('popup-open');
+  }
+
+  function closePopup() {
+    overlay.style.display = 'none';
+    document.body.classList.remove('popup-open');
+  }
+
+  triggerBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPopup();
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay.style.display === 'flex') {
       closePopup();
