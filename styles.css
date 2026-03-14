@@ -2819,8 +2819,32 @@ body.popup-open {
     font-size: 36px;
   }
 
+  .participants-section {
+    grid-row-gap: 32px;
+  }
+
+  .h2 {
+    font-size: 42px;
+  }
+
+  .participants-subtitle {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
   .what-you-grid {
     grid-template-columns: 1fr;
+  }
+
+  .logo-track {
+    grid-column-gap: 40px;
+    height: 60px;
+  }
+
+  .logo-track img {
+    height: 32px;
+    width: auto;
   }
 }
 
@@ -2931,6 +2955,16 @@ body.popup-open {
 
   .footer-large-logo {
     height: auto;
+  }
+
+  .logo-track {
+    grid-column-gap: 24px;
+    height: 50px;
+  }
+
+  .logo-track img {
+    height: 24px;
+    width: auto;
   }
 }
 
