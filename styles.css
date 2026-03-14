@@ -990,7 +990,8 @@ button {
    SLIDER – "Real Side Businesses"
    ================================================================ */
 .slider-section {
-  padding: 75px 50px 0;
+  padding: 100px 50px 150px;
+  position: relative;
 }
 
 .slider-section h2 {
@@ -998,30 +999,42 @@ button {
   font-size: 64px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 40px;
-  max-width: 700px;
+  margin-bottom: 60px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 64px;
+  line-height: 1;
 }
 
 .slider-container {
-  max-width: 1440px;
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: visible; */
 }
 
-.slider-arrows {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1440px;
-  margin: 30px auto 0;
+.swiper-slide {
+  height: auto;
 }
 
 .swiper-slide-card {
-  background: #f9f9f9;
-  border-radius: 20px;
-  overflow: hidden;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  box-shadow: none;
+  background-color: #f9f9f9;
+  border: 1px solid #f2e5ff;
+  border-radius: 1.25rem;
+  flex-flow: column;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 1rem 2rem;
+  display: flex;
+}
+
+.slide-card-text {
+  padding: 0 4px;
+  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -1030,30 +1043,45 @@ button {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  object-fit: cover;
 }
 
 .slide-card-text {
-  padding: 24px 16px;
+  padding: 0 4px;
 }
 
 .slide-card-title {
-  font-family: 'Nonbureau', Arial, sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 20px;
   font-weight: 500;
   color: #131313;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 26px;
 }
 
 .slide-card-desc {
+  font-family: 'Manrope', sans-serif;
   font-size: 16px;
-  color: #131313;
-  line-height: 1.4;
+  color: #131313cc;
+  line-height: 20px;
+}
+
+.slider-arrows {
+  position: absolute;
+  bottom: 80px;
+  left: 70px;
+  right: 70px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  z-index: 10;
 }
 
 .slider-arrow {
-  width: 70px;
-  height: 70px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   border: none;
   background: #f8f8f8;
@@ -1066,11 +1094,21 @@ button {
 }
 
 .slider-arrow:hover {
-  background: #eee;
+  background: #f0f0f0;
 }
 
 .slider-arrow img {
-  width: 20px;
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.slider-prev img {
+  transform: rotate(0deg);
+}
+
+.slider-next img {
+  transform: rotate(180deg);
 }
 
 /* ================================================================
@@ -1092,23 +1130,25 @@ button {
 
 .speaker-subtitle {
   text-align: center;
-  font-size: 17px;
-  color: #666;
-  max-width: 650px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
+  font-size: 18px;
+  color: #131313;
+  margin: 0 auto 60px;
+  line-height: 1.4;
+  font-weight: 300;
 }
 
 .speaker-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px 20px;
 }
 
 .speaker-card {
   background: transparent;
-  overflow: hidden;
   transition: transform 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .speaker-card:hover {
@@ -1135,6 +1175,7 @@ button {
   top: 0;
   left: 0;
   opacity: 0;
+
 }
 
 .speaker-card:hover .hover-img {
@@ -1157,6 +1198,9 @@ button {
 
 .speaker-info {
   padding: 18px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .speaker-name-row {
@@ -1191,7 +1235,8 @@ button {
 
 .speaker-readmore {
   display: inline-block;
-  margin-top: 8px;
+  margin-top: auto;
+  padding-top: 12px;
   font-size: 14px;
   font-weight: 600;
   color: #131313;
@@ -1208,12 +1253,21 @@ button {
    PROGRAM SECTION
    ================================================================ */
 .program-section {
-  padding: 100px 50px;
-  background: linear-gradient(160deg, #8a4dff 0%, #6e35d8 40%, #5a28b8 100%);
+  grid-column-gap: 70px;
+  grid-row-gap: 70px;
+  background-color: #8238fd;
+  background-image: url('assets/6889f7b15053d2488c0ed746_1-block.png');
+  background-position: 50% -310px;
+  background-repeat: no-repeat;
+  background-size: auto;
   border-radius: 20px;
-  max-width: 95%;
-  margin: 40px auto;
-  color: #fff;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 74px;
+  padding-left: 36px;
+  padding-right: 36px;
+  display: flex;
 }
 
 .program-tag {
@@ -2659,5 +2713,173 @@ body.popup-open {
 
   .footer-large-logo {
     height: auto;
+  }
+}
+
+/* ================================================================
+   SPEAKER POPUP
+   ================================================================ */
+.speaker-popup-card {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.speaker-popup-content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.speaker-popup-photo-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.speaker-popup-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-popup-tags {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: calc(100% - 24px);
+}
+
+.speaker-popup-tag {
+  background: rgba(255, 255, 255, 0.9);
+  color: #131313;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid #e0e0e0;
+}
+
+.speaker-popup-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.speaker-popup-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.speaker-popup-name {
+  font-family: 'Nonbureau', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #131313;
+  margin: 0;
+}
+
+.speaker-popup-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+.pin-icon {
+  font-size: 14px;
+}
+
+.speaker-popup-tagline {
+  font-size: 18px;
+  font-weight: 700;
+  color: #131313;
+  line-height: 1.4;
+}
+
+.speaker-popup-bio {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.speaker-popup-bio li {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+}
+
+.speaker-popup-bio li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #131313;
+  font-weight: bold;
+}
+
+.speaker-popup-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #131313;
+  text-decoration: none;
+  transition: color 0.2s;
+  width: fit-content;
+}
+
+.speaker-popup-linkedin img {
+  width: 18px;
+  height: 18px;
+}
+
+.speaker-popup-linkedin:hover {
+  color: #8238fd;
+}
+
+.speaker-close {
+  z-index: 10;
+}
+
+@media (max-width: 850px) {
+  .speaker-popup-card {
+    padding: 30px 20px;
+    max-width: 95%;
+  }
+
+  .speaker-popup-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .speaker-popup-photo-wrap {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .speaker-popup-name {
+    font-size: 28px;
   }
 }
