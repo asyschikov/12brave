@@ -1,929 +1,1398 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Side Business Course for Professionals | 12BRAVE Program</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-  <link rel="stylesheet" href="styles.css?v=20">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side Business Course for Professionals | 12BRAVE Program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css?v=20" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="/" class="nav-logo"
+          ><img src="assets/logo.svg" alt="12BRAVE"
+        /></a>
+        <div class="nav-links">
+          <a href="#program">Program</a>
+          <a href="/about-us">About us</a>
+          <a href="#team">Team</a>
+          <a href="#testimonials">Testimonials</a>
+        </div>
+        <a href="#" class="nav-cta" data-popup="clarity"
+          >Book a free call &mdash; see if it's a fit</a
+        >
+      </div>
+    </nav>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar" id="navbar">
-  <div class="navbar-inner">
-    <a href="/" class="nav-logo"><img src="assets/logo.svg" alt="12BRAVE"></a>
-    <div class="nav-links">
-      <a href="#program">Program</a>
-      <a href="/about-us">About us</a>
-      <a href="#team">Team</a>
-      <a href="#testimonials">Testimonials</a>
-    </div>
-    <a href="#" class="nav-cta" data-popup="clarity">Book a free call &mdash; see if it's a fit</a>
-  </div>
-</nav>
-
-<!-- ===== HERO SECTION ===== -->
-<section class="hero-section">
-  <div class="hero-wrapper">
-    <div class="hero-left">
-      <div class="hero-date">
-        <span>Next cohort start: 22.04.2026</span>
-        <span class="hero-date-spots">7 spots left</span>
-      </div>
-      <h1 class="hero-title">
-        <span class="line-wrapper"><span class="line">Side Business Accelerator:</span></span>
-        <span class="line-wrapper"><span class="line"><span class="text-purple">Validate &amp; Launch with AI</span></span></span>
-      </h1>
-      <div class="hero-description">
-        <p class="paragraph">We help mid-to-senior professionals build a real side business while keeping their job.</p>
-        <p class="paragraph">You've been thinking about starting something for years.</p>
-        <p class="paragraph">Maybe you have one idea you keep putting off. Maybe you have three and can't choose.</p>
-        <p class="paragraph">Either way &mdash; that's exactly what this program is for.</p>
-      </div>
-      <div class="hero-buttons">
-        <a href="#program" class="btn-outline">See curriculum</a>
-        <a href="#" class="btn-dark" data-popup="clarity">Book a free call &mdash; see if it's a fit</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="stat-value">10</div>
-          <div class="stat-label">sessions</div>
-        </div>
-        <div class="stats-divider"></div>
-        <div class="hero-stat">
-          <div class="stat-value">Live</div>
-          <div class="stat-label">Cohorts</div>
-        </div>
-        <div class="stats-divider"></div>
-        <div class="hero-stat">
-          <div class="stat-value">Keep</div>
-          <div class="stat-label">your job</div>
-        </div>
-        <div class="stats-divider"></div>
-        <div class="hero-stat">
-          <div class="stat-value">4.8</div>
-          <div class="stat-label"><span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        </div>
-        <div class="stats-divider"></div>
-        <div class="hero-stat">
-          <div class="stat-value">100+</div>
-          <div class="stat-label">Alumni</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-testimonial-wrapper">
-        <div class="hero-testimonial-card active">
-          <img src="assets/images/testimonial-fernando.jpg" alt="Fernando Founar" class="hero-testimonial-photo">
-          <div class="hero-testimonial-info">
-            <div class="hero-testimonial-name">Fernando Founar</div>
-            <div class="hero-testimonial-role">Lead IT Consultant</div>
-            <div class="hero-testimonial-desc">Created communication consulting offering. Organized his <strong>first workshop</strong></div>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section">
+      <div class="hero-wrapper">
+        <div class="hero-left">
+          <div class="hero-date">
+            Next cohort start: 22.04.2026<br />7 spots left
           </div>
-        </div>
-        <div class="hero-testimonial-card">
-          <img src="assets/images/hero1.jpg" alt="Kobi Cohen" class="hero-testimonial-photo">
-          <div class="hero-testimonial-info">
-            <div class="hero-testimonial-name">Kobi Cohen</div>
-            <div class="hero-testimonial-role">Head of Brand</div>
-            <div class="hero-testimonial-desc">Decided to offer AI Content Factory as a service. Got 2 clients incl. a <strong>Head of a VC from Palo Alto</strong></div>
-          </div>
-        </div>
-        <div class="hero-testimonial-card">
-          <img src="assets/images/hero-frame.jpg" alt="Ekaterina Vtornikova" class="hero-testimonial-photo">
-          <div class="hero-testimonial-info">
-            <div class="hero-testimonial-name">Ekaterina Vtornikova</div>
-            <div class="hero-testimonial-role">Leadership Coach</div>
-            <div class="hero-testimonial-desc">Redefined her original coaching offer and got <strong>first test clients</strong></div>
-          </div>
-        </div>
-        <div class="hero-testimonial-card">
-          <img src="assets/images/testimonial-bogdan.jpg" alt="Bogdan Arizancu" class="hero-testimonial-photo">
-          <div class="hero-testimonial-info">
-            <div class="hero-testimonial-name">Bogdan Arizancu</div>
-            <div class="hero-testimonial-role">Software Developer</div>
-            <div class="hero-testimonial-desc">Created a micro SaaS LingoLyft. Got <strong>100+ waiting list sign ups</strong></div>
-          </div>
-        </div>
-        <div class="hero-testimonial-card">
-          <img src="assets/images/hero-group2.png" alt="Margaret Sia" class="hero-testimonial-photo">
-          <div class="hero-testimonial-info">
-            <div class="hero-testimonial-name">Margaret Sia</div>
-            <div class="hero-testimonial-role">IT Consultant</div>
-            <div class="hero-testimonial-desc">Validated her Staffing offer &amp; <strong>built a pipeline</strong> of Kenyan developers via LinkedIn</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WHAT YOU ACTUALLY WALK AWAY WITH ===== -->
-<section class="what-you-section">
-  <div class="what-you-cont">
-    <h2 class="what-you-title">What you actually walk away with</h2>
-    <p class="what-you-subtitle">Most people who join 12BRAVE have been thinking about starting something for 1&ndash;3 years. By the end of the program, they've stopped thinking and started. Here's specifically what that looks like.</p>
-    <div class="what-you-grid">
-      <div class="what-you-row">
-        <div class="what-you-card">
-          <img src="assets/icons/checkmark.svg" alt="">
-          <span>Clarity on which idea to actually pursue, even if you arrive with five</span>
-        </div>
-        <div class="what-you-card">
-          <img src="assets/icons/checkmark.svg" alt="">
-          <span>A weekly action rhythm that fits around a full-time job. AI shortcuts where possible</span>
-        </div>
-      </div>
-      <div class="what-you-row">
-        <div class="what-you-card">
-          <img src="assets/icons/checkmark.svg" alt="">
-          <span>A tested offer, validated with real people, not just in your head</span>
-        </div>
-        <div class="what-you-card">
-          <img src="assets/icons/checkmark.svg" alt="">
-          <span>A real thing in the world, not a website noone sees and not a business plan</span>
-        </div>
-      </div>
-      <div class="what-you-row">
-        <div class="what-you-card">
-          <img src="assets/icons/checkmark.svg" alt="">
-          <span>Your first paying clients, and the plan how to scale from there</span>
-        </div>
-        <div class="what-you-card">
-          <img src="assets/icons/checkmark.svg" alt="">
-          <span>A community of peers doing the same thing who will share their learnings along the way</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WHY WE BUILT THIS ===== -->
-<section class="why-built-section" id="why">
-  <div class="why-built-story">
-    <div class="why-built-story-text">
-      <h1 class="why-built-title">Why we built this?</h1>
-      <div class="why-built-text">
-        <p>We spent 12 to 20 years in corporate and consulting. We were good at it. We genuinely liked a lot of it. But at some point the question changed. It stopped being "how do I get to the next level" and became "is the next level actually what I want?"</p>
-        <p>For us the answer was no. Not because something went wrong. Because something else started pulling harder. We did not want to wait until 55 to find out what we were capable of building on our own. So we started, carefully, while the salary was still coming in. 12BRAVE is what we wished had existed when we made that shift.</p>
-      </div>
-    </div>
-    <div class="why-built-flower">
-      <div class="flower-visual">
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-      </div>
-    </div>
-  </div>
-  <div class="founders-grid">
-      <div class="founder-card">
-        <div class="founder-photo">
-          <img src="assets/team/victoria.jpg" alt="Victoria Sheer">
-        </div>
-        <div class="founder-info">
-          <div class="founder-name-row">
-            <div class="founder-name">Victoria Sheer</div>
-            <div class="founder-location">Amsterdam</div>
-          </div>
-          <div class="founder-bio">
-            <p>Victoria has 11+ years of experience in German corporates such as SAP, Henkel, and Aldi S&uuml;d. From Henkel she exited as a Head of Product MarTech and joined Aldi S&uuml;d where she became Global Product Strategy &amp; Operations Lead. In parallel to building a successful career she has conducted 100+ paid mentoring sessions, became a keynote speaker and led over 30 certified group trainings. She co-founded a product management consulting firm, and built and monetized a community of over 1,000 members.</p>
-          </div>
-          <div class="founder-badges">
-            <span class="founder-badge">SAP</span>
-            <span class="founder-badge">Henkel</span>
-            <span class="founder-badge">Aldi S&uuml;d</span>
-          </div>
-          <a href="https://www.linkedin.com/in/victoriasheer/" class="founder-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"> LinkedIn</a>
-        </div>
-      </div>
-      <div class="founder-card">
-        <div class="founder-photo">
-          <img src="assets/team/ekaterina.jpg" alt="Ekaterina Servetnik">
-        </div>
-        <div class="founder-info">
-          <div class="founder-name-row">
-            <div class="founder-name">Ekaterina Servetnik</div>
-            <div class="founder-location">D&uuml;sseldorf</div>
-          </div>
-          <div class="founder-bio">
-            <p>Ekaterina brings 17+ years of experience in consulting, customer experience, and go-to-market strategy for startups and scale-ups. She held leadership roles as Head of Product and CX, launched AI programs with Google, and worked in leadership of Capgemini Invent and Deloitte Monitor. She holds an Executive MBA from INSEAD and is a certified service design coach. Alongside her corporate career, Ekaterina co-founded RE:ACT D&uuml;sseldorf, a community bridging art and art lovers. She also runs advisory sessions on market entry for innovative businesses, and teaches negotiation and C-level communication skills for corporate professionals.</p>
-          </div>
-          <div class="founder-badges">
-            <span class="founder-badge">Capgemini Invent</span>
-            <span class="founder-badge">Deloitte</span>
-            <span class="founder-badge">INSEAD MBA</span>
-          </div>
-          <a href="https://www.linkedin.com/in/ekaterina-servetnik/" class="founder-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"> LinkedIn</a>
-        </div>
-      </div>
-  </div>
-</section>
-
-<!-- ===== ALUMNI / PARTICIPANTS ===== -->
-<section class="participants-section">
-  <h2>Alumni</h2>
-  <p class="participants-subtitle">We are trusted by senior level professionals from top European companies</p>
-  <div class="logo-marquee">
-    <div class="logo-track">
-      <img src="assets/logos/deloitte.svg" alt="Deloitte">
-      <img src="assets/logos/manhattan.jpg" alt="Manhattan">
-      <img src="assets/logos/aldi.jpg" alt="Aldi">
-      <img src="assets/logos/zalando.png" alt="Zalando">
-      <img src="assets/logos/hso.png" alt="HSO">
-      <img src="assets/logos/rsm.png" alt="RSM">
-      <img src="assets/logos/imbix.jpg" alt="Imbix">
-      <img src="assets/logos/metro.jpg" alt="Metro">
-      <img src="assets/logos/coface.png" alt="Coface">
-      <img src="assets/logos/cognizant.png" alt="Cognizant">
-      <!-- Duplicate -->
-      <img src="assets/logos/deloitte.svg" alt="Deloitte">
-      <img src="assets/logos/manhattan.jpg" alt="Manhattan">
-      <img src="assets/logos/aldi.jpg" alt="Aldi">
-      <img src="assets/logos/zalando.png" alt="Zalando">
-      <img src="assets/logos/hso.png" alt="HSO">
-      <img src="assets/logos/rsm.png" alt="RSM">
-      <img src="assets/logos/imbix.jpg" alt="Imbix">
-      <img src="assets/logos/metro.jpg" alt="Metro">
-      <img src="assets/logos/coface.png" alt="Coface">
-      <img src="assets/logos/cognizant.png" alt="Cognizant">
-    </div>
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section class="testimonials-section" id="testimonials">
-  <div class="testimonials-header">
-    <h2>What our alumni love</h2>
-    <div class="testimonials-avatars">
-      <img src="assets/images/testimonial-fernando.jpg" alt="">
-      <img src="assets/images/testimonial-nadzeya.jpg" alt="">
-      <img src="assets/images/testimonial-bogdan.jpg" alt="">
-      <img src="assets/team/victoria.jpg" alt="">
-    </div>
-    <div class="testimonials-rating">
-      <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0
-    </div>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-author">
-        <img src="assets/images/testimonial-fernando.jpg" alt="Fernando" class="testimonial-avatar">
-        <div class="testimonial-author-info">
-          <div class="testimonial-name">Fernando Founar</div>
-          <div class="testimonial-role">Executive MBA, D365 Lead consultant</div>
-        </div>
-        <img src="assets/images/logo-hso.png" alt="HSO" class="testimonial-company-logo">
-      </div>
-      <div class="testimonial-text">&laquo;Thanks for the push. In just a month I went from "what if" to actually moving on my side business. I've got a name, a landing page and even the first leads&nbsp;&raquo;</div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-author">
-        <img src="assets/images/testimonial-nadzeya.jpg" alt="Nadzeya" class="testimonial-avatar">
-        <div class="testimonial-author-info">
-          <div class="testimonial-name">Nadzeya Bulakh</div>
-          <div class="testimonial-role">Operational Excellence</div>
-        </div>
-        <img src="assets/images/logo-coface.jpg" alt="Coface" class="testimonial-company-logo">
-      </div>
-      <div class="testimonial-text">&laquo;The step-by-step guidance I received transformed my vague desire to start a side business into a concrete offering&raquo;</div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-author">
-        <img src="assets/images/testimonial-bogdan.jpg" alt="Bogdan" class="testimonial-avatar">
-        <div class="testimonial-author-info">
-          <div class="testimonial-name">Bogdan Arizancu</div>
-          <div class="testimonial-role">Software Developer</div>
-        </div>
-        <img src="assets/images/logo-manhattan-m.png" alt="Manhattan" class="testimonial-company-logo">
-      </div>
-      <div class="testimonial-text">&laquo;The mentors were amazing...and the peer community. It is honestly exactly what I needed to finally move from just having ideas to actually taking action on them&raquo;</div>
-    </div>
-  </div>
-  <div style="text-align:center;">
-    <a href="#" class="view-all-btn">View all</a>
-  </div>
-</section>
-
-<!-- ===== REAL SIDE BUSINESSES SLIDER ===== -->
-<section class="slider-section">
-  <h2>Real Side Businesses<br>Our Alumni Started</h2>
-  <div class="slider-container">
-    <div class="swiper is-prime">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="swiper-slide-card">
-            <img src="assets/images/slides/lingolyft.webp" alt="LingoLyft" class="slide-card-img">
-            <div class="slide-card-text">
-              <div class="slide-card-title">LingoLyft</div>
-              <div class="slide-card-desc">LingoLyft is a tool for YouTube content creators that automates the metadata upload and translation to different languages.</div>
+          <div class="hero-title-wrapper">
+            <div class="text-wrapeer_flex">
+              <div class="line-wrapper">
+                <h1 class="hero-title">
+                  <span class="line">Side Business Accelerator: </span
+                  ><span class="text-purple"
+                    >Validate &amp; Launch with AI</span
+                  >
+                </h1>
+              </div>
+              <div class="line-wrapper parag">
+                <p class="paragraph">
+                  We help mid-to-senior professionals build a real side business
+                  while keeping their job.<br />You've been thinking about
+                  starting something for years. <br />Maybe you have one idea
+                  you keep putting off. Maybe you have three and can't
+                  choose.<br />Either way &mdash; that's exactly what this
+                  program is for. <br />
+                </p>
+              </div>
+            </div>
+            <div class="hero-buttons-wrap">
+              <a href="#program" class="end-sprint">See curriculum</a>
+              <a href="#" class="download-button" data-popup="clarity"
+                >Book a free call &mdash; see if it's a fit</a
+              >
+            </div>
+            <div class="prime-wrapper gap-24">
+              <div>
+                <div class="txt-22 text_semi-bold text-color_purple">10</div>
+                <div class="pd-up-0-375"></div>
+                <div class="txt-16 regular text-color_gray">sessions</div>
+              </div>
+              <div class="devider"></div>
+              <div>
+                <div class="txt-22 text_semi-bold text-color_purple">Live</div>
+                <div class="pd-up-0-375"></div>
+                <div class="txt-16 regular text-color_gray">Cohorts</div>
+              </div>
+              <div class="devider"></div>
+              <div>
+                <div class="txt-22 text_semi-bold text-color_purple">Keep</div>
+                <div class="pd-up-0-375"></div>
+                <div class="txt-16 regular text-color_gray">your job</div>
+              </div>
+              <div class="devider"></div>
+              <div>
+                <div class="txt-22 text_semi-bold text-color_purple">4.8</div>
+                <div class="pd-up-0-375"></div>
+                <img
+                  src="https://cdn.prod.website-files.com/687fa761be60df02646a1dc0/690cd51845380294587dc0cb_Frame%201948756389.svg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div class="devider"></div>
+              <div>
+                <div class="txt-22 text_semi-bold text-color_purple">100+</div>
+                <div class="pd-up-0-375"></div>
+                <div class="txt-16 regular text-color_gray">Alumni</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="swiper-slide-card">
-            <img src="assets/images/slides/needless.png" alt="The Needless" class="slide-card-img">
-            <div class="slide-card-text">
-              <div class="slide-card-title">The Needless</div>
-              <div class="slide-card-desc">Personal finance and wealth management tracker</div>
+        <div class="hero-right">
+          <div class="hero-testimonial-wrapper">
+            <div class="hero-testimonial-card active">
+              <img
+                src="assets/images/testimonial-fernando.jpg"
+                alt="Fernando Founar"
+                class="hero-testimonial-photo"
+              />
+              <div class="hero-testimonial-info">
+                <div class="hero-testimonial-name">Fernando Founar</div>
+                <div class="hero-testimonial-role">Lead IT Consultant</div>
+                <div class="hero-testimonial-desc">
+                  Created communication consulting offering. Organized his
+                  <strong>first workshop</strong>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-slide-card">
-            <img src="assets/images/slides/whatsapp-bot.webp" alt="WhatsApp Business Bot" class="slide-card-img">
-            <div class="slide-card-text">
-              <div class="slide-card-title">WhatsApp Business Bot</div>
-              <div class="slide-card-desc">WhatsApp full cycle sales communication automation service</div>
+            <div class="hero-testimonial-card">
+              <img
+                src="assets/images/hero1.jpg"
+                alt="Kobi Cohen"
+                class="hero-testimonial-photo"
+              />
+              <div class="hero-testimonial-info">
+                <div class="hero-testimonial-name">Kobi Cohen</div>
+                <div class="hero-testimonial-role">Head of Brand</div>
+                <div class="hero-testimonial-desc">
+                  Decided to offer AI Content Factory as a service. Got 2
+                  clients incl. a <strong>Head of a VC from Palo Alto</strong>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-slide-card">
-            <img src="assets/images/slides/stagewise.webp" alt="Stagewise 360" class="slide-card-img">
-            <div class="slide-card-text">
-              <div class="slide-card-title">Stagewise 360</div>
-              <div class="slide-card-desc">Personal Leadership coaching communication program for middle managers to help them transform into influential leaders</div>
+            <div class="hero-testimonial-card">
+              <img
+                src="assets/images/hero-frame.jpg"
+                alt="Ekaterina Vtornikova"
+                class="hero-testimonial-photo"
+              />
+              <div class="hero-testimonial-info">
+                <div class="hero-testimonial-name">Ekaterina Vtornikova</div>
+                <div class="hero-testimonial-role">Leadership Coach</div>
+                <div class="hero-testimonial-desc">
+                  Redefined her original coaching offer and got
+                  <strong>first test clients</strong>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="slider-arrows">
-    <button class="slider-arrow slider-prev"><img src="assets/icons/left-arrow.svg" alt="Previous"></button>
-    <button class="slider-arrow slider-next"><img src="assets/icons/right-arrow.svg" alt="Next"></button>
-  </div>
-</section>
+    </section>
 
-<!-- ===== MEET YOUR TEAM ===== -->
-<section class="speaker-section" id="team">
-  <h2 class="speaker-section-title">Meet Your Team</h2>
-  <p class="speaker-subtitle">Our mentors have built successful portfolio careers and share proven strategies and shortcuts to help you launch your side business faster and with confidence.</p>
-  <div class="speaker-grid">
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/victoria.jpg" alt="Victoria Sheer">
-        <img src="assets/team/victoria-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/victoriasheer/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Victoria Sheer</div>
-          <div class="speaker-location">Amsterdam</div>
+    <!-- ===== WHAT YOU ACTUALLY WALK AWAY WITH ===== -->
+    <section class="what-you-section">
+      <div class="what-you-cont">
+        <h2 class="what-you-title">What you actually walk away with</h2>
+        <p class="what-you-subtitle">
+          Most people who join 12BRAVE have been thinking about starting
+          something for 1&ndash;3 years. By the end of the program, they've
+          stopped thinking and started. Here's specifically what that looks
+          like.
+        </p>
+        <div class="what-you-grid">
+          <div class="what-you-row">
+            <div class="what-you-card">
+              <img src="assets/icons/checkmark.svg" alt="" />
+              <span
+                >Clarity on which idea to actually pursue, even if you arrive
+                with five</span
+              >
+            </div>
+            <div class="what-you-card">
+              <img src="assets/icons/checkmark.svg" alt="" />
+              <span
+                >A weekly action rhythm that fits around a full-time job. AI
+                shortcuts where possible</span
+              >
+            </div>
+          </div>
+          <div class="what-you-row">
+            <div class="what-you-card">
+              <img src="assets/icons/checkmark.svg" alt="" />
+              <span
+                >A tested offer, validated with real people, not just in your
+                head</span
+              >
+            </div>
+            <div class="what-you-card">
+              <img src="assets/icons/checkmark.svg" alt="" />
+              <span
+                >A real thing in the world, not a website noone sees and not a
+                business plan</span
+              >
+            </div>
+          </div>
+          <div class="what-you-row">
+            <div class="what-you-card">
+              <img src="assets/icons/checkmark.svg" alt="" />
+              <span
+                >Your first paying clients, and the plan how to scale from
+                there</span
+              >
+            </div>
+            <div class="what-you-card">
+              <img src="assets/icons/checkmark.svg" alt="" />
+              <span
+                >A community of peers doing the same thing who will share their
+                learnings along the way</span
+              >
+            </div>
+          </div>
         </div>
-        <div class="speaker-bio">
-          <p>12+ years in Product Leadership (SAP, Henkel, Aldi Sud).</p>
-          <p>Portfolio Career since 2019 (100+ paid mentorings, 30+ trainings, consulting practice, community builder).</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
       </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/ekaterina.jpg" alt="Ekaterina Servetnik">
-        <img src="assets/team/ekaterina-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/ekaterina-servetnik/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Ekaterina Servetnik</div>
-          <div class="speaker-location">Dusseldorf</div>
-        </div>
-        <div class="speaker-bio">
-          <p>17+ years in consulting, CX, digital & strategy.</p>
-          <p>Go-to-market advisor for startups & scale-ups (SaaS, AI driven)</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/florian.jpg" alt="Florian Klein">
-        <img src="assets/team/florian-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/florianklein" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Florian Klein</div>
-          <div class="speaker-location">Allgau</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Former global head of Strategic Foresight of a Big4 firm.</p>
-          <p>Co-Founder of ananki.ai, world's first automated neural-AI foresight engine.</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/artem.jpg" alt="Artem Koren">
-        <img src="assets/team/artem-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/akoren/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Artem Koren</div>
-          <div class="speaker-location">New York City</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Co-founder and Chief Product Officer at Sembly AI (2M ARR)</p>
-          <p>BS in Computer Science (Columbia University) and MBA (NYU Stern)</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/nils.jpg" alt="Nils Stotz">
-        <img src="assets/team/nils-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/nilsstotz/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Nils Stotz</div>
-          <div class="speaker-location">Berlin</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Head of Product - Experimentation at Zalando.</p>
-          <p>Published 3 Books. Created 3 Online-Courses with 1,500+ Students</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/maria.jpg" alt="Maria Ledentsova">
-        <img src="assets/team/maria-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/marialeden" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Maria Ledentsova</div>
-          <div class="speaker-location">Berlin</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Founding marketer at a design agency - drove 2x+ revenue growth.</p>
-          <p>Grew LinkedIn personal brand to 18k+ followers.</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/clyde.jpg" alt="Clyde Araujo">
-        <img src="assets/team/clyde-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/araujoclyde/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Clyde Araujo</div>
-          <div class="speaker-location">Koblenz</div>
-        </div>
-        <div class="speaker-bio">
-          <p>15+ years global business leadership experience at Henkel, Metro, Huawei</p>
-          <p>Startup Advisor on Martech, Data Monetisation and IoT</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/joao.jpg" alt="Joao Moita">
-        <img src="assets/team/joao-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/joaomoita/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Joao Moita</div>
-          <div class="speaker-location">Lisbon</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Community Builder and Entrepreneur</p>
-          <p>Founder of Product Weekend community live in 15+ countries</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/catia.jpg" alt="Catia Nunes">
-        <img src="assets/team/catia-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/catiacnunes/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Catia Nunes</div>
-          <div class="speaker-location">Lisbon</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Growth and Performance Marketing Leader with over 10 years of experience</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/ayushman.jpg" alt="Ayushman de Lang-Talwar">
-        <img src="assets/team/ayushman-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/ayushmantalwar/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Ayushman de Lang-Talwar</div>
-          <div class="speaker-location">Amsterdam</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Cofounded Hable - accessibility startup (exited)</p>
-          <p>Led multiple products to +&euro;xxM revenue</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/ruzgar.jpg" alt="Ruzgar Zere">
-        <img src="assets/team/ruzgar-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/rzere/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Ruzgar Zere</div>
-          <div class="speaker-location">Tallinn</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Built and scaled a B2B SaaS to 350+ paying customers</p>
-          <p>Shipped and operated the product end-to-end as a solo founder</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/andrey.jpg" alt="Andrey Dyatlov">
-        <img src="assets/team/andrey-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/thelacker/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Andrey Dyatlov</div>
-          <div class="speaker-location">Paris</div>
-        </div>
-        <div class="speaker-bio">
-          <p>CEO and Founder of Rapid Delivery Analytics</p>
-          <p>His clients include PepsiCo, Unilever, Volkswagen and Ferrero.</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/elena.jpg" alt="Elena Zhigalina">
-        <img src="assets/team/elena-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/elena-zhigalina/" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Elena Zhigalina</div>
-          <div class="speaker-location">Madrid</div>
-        </div>
-        <div class="speaker-bio">
-          <p>15+ years in B2C & B2B marketing</p>
-          <p>MBA in Marketing & Innovation. Angel investor and Advisor</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-    <div class="speaker-card">
-      <div class="speaker-photo">
-        <img src="assets/team/leon.jpg" alt="Leon Wisskirchen">
-        <img src="assets/team/leon-hover.jpg" alt="" class="hover-img">
-        <a href="https://www.linkedin.com/in/leon-wisskirchen" class="speaker-linkedin" target="_blank"><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"></a>
-      </div>
-      <div class="speaker-info">
-        <div class="speaker-name-row">
-          <div class="speaker-name">Leon Wisskirchen</div>
-          <div class="speaker-location">Berlin</div>
-        </div>
-        <div class="speaker-bio">
-          <p>Serial entrepreneur and Velsa Co-Founder & CEO</p>
-          <p>Thought Leader in Legal Tech</p>
-        </div>
-        <span class="speaker-readmore">Read more</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===== PROGRAM SECTION ===== -->
-<section class="program-section" id="program">
-  <div class="program-tag">100% remote</div>
-  <h2 class="program-title">Weekly Curriculum in Details</h2>
-  <ul class="program-bullets">
-    <li>10 weekly live sessions</li>
-    <li>1-1 mentoring and personal feedback on demand</li>
-    <li>We use every AI shortcut available &mdash; and show you exactly where you still need to do the real work yourself</li>
-  </ul>
+    <!-- ===== WHY WE BUILT THIS ===== -->
+    <section class="why-built-section" id="why">
+      <div class="why-built-story">
+        <div class="why-built-story-text">
+          <h1 class="why-built-title">Why we built this?</h1>
+          <div class="why-built-text">
+            <p>
+              We spent 12 to 20 years in corporate and consulting. We were good
+              at it. We genuinely liked a lot of it. But at some point the
+              question changed. It stopped being "how do I get to the next
+              level" and became "is the next level actually what I want?"
+            </p>
+            <p>
+              For us the answer was no. Not because something went wrong.
+              Because something else started pulling harder. We did not want to
+              wait until 55 to find out what we were capable of building on our
+              own. So we started, carefully, while the salary was still coming
+              in. 12BRAVE is what we wished had existed when we made that shift.
+            </p>
+          </div>
+        </div>
+        <div class="why-built-flower">
+          <div class="flower-visual">
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+            <div class="flower-petal"></div>
+          </div>
+        </div>
+      </div>
+      <div class="founders-grid">
+        <div class="founder-card">
+          <div class="founder-photo">
+            <img src="assets/team/victoria.jpg" alt="Victoria Sheer" />
+          </div>
+          <div class="founder-info">
+            <div class="founder-name-row">
+              <div class="founder-name">Victoria Sheer</div>
+              <div class="founder-location">Amsterdam</div>
+            </div>
+            <div class="founder-bio">
+              <p>
+                Victoria has 11+ years of experience in German corporates such
+                as SAP, Henkel, and Aldi S&uuml;d. From Henkel she exited as a
+                Head of Product MarTech and joined Aldi S&uuml;d where she
+                became Global Product Strategy &amp; Operations Lead. In
+                parallel to building a successful career she has conducted 100+
+                paid mentoring sessions, became a keynote speaker and led over
+                30 certified group trainings. She co-founded a product
+                management consulting firm, and built and monetized a community
+                of over 1,000 members.
+              </p>
+            </div>
+            <div class="founder-badges">
+              <span class="founder-badge">SAP</span>
+              <span class="founder-badge">Henkel</span>
+              <span class="founder-badge">Aldi S&uuml;d</span>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/victoriasheer/"
+              class="founder-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn" />
+              LinkedIn</a
+            >
+          </div>
+        </div>
+        <div class="founder-card">
+          <div class="founder-photo">
+            <img src="assets/team/ekaterina.jpg" alt="Ekaterina Servetnik" />
+          </div>
+          <div class="founder-info">
+            <div class="founder-name-row">
+              <div class="founder-name">Ekaterina Servetnik</div>
+              <div class="founder-location">D&uuml;sseldorf</div>
+            </div>
+            <div class="founder-bio">
+              <p>
+                Ekaterina brings 17+ years of experience in consulting, customer
+                experience, and go-to-market strategy for startups and
+                scale-ups. She held leadership roles as Head of Product and CX,
+                launched AI programs with Google, and worked in leadership of
+                Capgemini Invent and Deloitte Monitor. She holds an Executive
+                MBA from INSEAD and is a certified service design coach.
+                Alongside her corporate career, Ekaterina co-founded RE:ACT
+                D&uuml;sseldorf, a community bridging art and art lovers. She
+                also runs advisory sessions on market entry for innovative
+                businesses, and teaches negotiation and C-level communication
+                skills for corporate professionals.
+              </p>
+            </div>
+            <div class="founder-badges">
+              <span class="founder-badge">Capgemini Invent</span>
+              <span class="founder-badge">Deloitte</span>
+              <span class="founder-badge">INSEAD MBA</span>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/ekaterina-servetnik/"
+              class="founder-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn" />
+              LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="program-accordion">
-    <div class="program-accord-item active">
-      <div class="program-accord-header">
-        <div class="accord-left">
-          <span class="accord-number">01</span>
-          <span class="accord-phase">FIRST IDEA</span>
-        </div>
-        <div class="accord-right">
-          <span class="accord-duration">1 session</span>
-          <svg class="accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-      </div>
-      <div class="program-accord-body">
-        <div class="program-accord-body-inner">
-          <span class="accord-body-text">Select Your First Idea to Test</span>
-        </div>
-      </div>
-    </div>
-    <div class="program-accord-item">
-      <div class="program-accord-header">
-        <div class="accord-left">
-          <span class="accord-number">02</span>
-          <span class="accord-phase">MARKET VALIDATION PROOF</span>
-        </div>
-        <div class="accord-right">
-          <span class="accord-duration">3 sessions</span>
-          <svg class="accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-      </div>
-      <div class="program-accord-body">
-        <div class="program-accord-body-inner">
-          <span class="accord-body-text">Market &amp; Customer Research with AI and your positioning</span>
+    <!-- ===== ALUMNI / PARTICIPANTS ===== -->
+    <section class="participants-section">
+      <h2>Alumni</h2>
+      <p class="participants-subtitle">
+        We are trusted by senior level professionals from top European companies
+      </p>
+      <div class="logo-marquee">
+        <div class="logo-track">
+          <img src="assets/logos/deloitte.svg" alt="Deloitte" />
+          <img src="assets/logos/manhattan.jpg" alt="Manhattan" />
+          <img src="assets/logos/aldi.jpg" alt="Aldi" />
+          <img src="assets/logos/zalando.png" alt="Zalando" />
+          <img src="assets/logos/hso.png" alt="HSO" />
+          <img src="assets/logos/rsm.png" alt="RSM" />
+          <img src="assets/logos/imbix.jpg" alt="Imbix" />
+          <img src="assets/logos/metro.jpg" alt="Metro" />
+          <img src="assets/logos/coface.png" alt="Coface" />
+          <img src="assets/logos/cognizant.png" alt="Cognizant" />
+          <!-- Duplicate -->
+          <img src="assets/logos/deloitte.svg" alt="Deloitte" />
+          <img src="assets/logos/manhattan.jpg" alt="Manhattan" />
+          <img src="assets/logos/aldi.jpg" alt="Aldi" />
+          <img src="assets/logos/zalando.png" alt="Zalando" />
+          <img src="assets/logos/hso.png" alt="HSO" />
+          <img src="assets/logos/rsm.png" alt="RSM" />
+          <img src="assets/logos/imbix.jpg" alt="Imbix" />
+          <img src="assets/logos/metro.jpg" alt="Metro" />
+          <img src="assets/logos/coface.png" alt="Coface" />
+          <img src="assets/logos/cognizant.png" alt="Cognizant" />
         </div>
       </div>
-    </div>
-    <div class="program-accord-item">
-      <div class="program-accord-header">
-        <div class="accord-left">
-          <span class="accord-number">03</span>
-          <span class="accord-phase">OFFER THAT WILL SELL</span>
-        </div>
-        <div class="accord-right">
-          <span class="accord-duration">2 sessions</span>
-          <svg class="accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-      </div>
-      <div class="program-accord-body">
-        <div class="program-accord-body-inner">
-          <span class="accord-body-text">Package your idea into final offering - landing page</span>
-        </div>
-      </div>
-    </div>
-    <div class="program-accord-item">
-      <div class="program-accord-header">
-        <div class="accord-left">
-          <span class="accord-number">04</span>
-          <span class="accord-phase">REVENUE SIGNALS</span>
-        </div>
-        <div class="accord-right">
-          <span class="accord-duration">3 sessions</span>
-          <svg class="accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-      </div>
-      <div class="program-accord-body">
-        <div class="program-accord-body-inner">
-          <span class="accord-body-text">Running real market tests and enhancing your offer</span>
-        </div>
-      </div>
-    </div>
-    <div class="program-accord-item">
-      <div class="program-accord-header">
-        <div class="accord-left">
-          <span class="accord-number">05</span>
-          <span class="accord-phase">BONUS</span>
-        </div>
-        <div class="accord-right">
-          <span class="accord-duration">1 session</span>
-          <svg class="accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-      </div>
-      <div class="program-accord-body">
-        <div class="program-accord-body-inner">
-          <span class="accord-body-text">LinkedIn personal brand</span>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <a href="#" class="program-detail-btn">Detailed curriculum</a>
-  <p class="program-note">Our program covers all key digital business areas - from tech products and communities to online courses, knowledge products, personal brands and agencies, giving you the skills to work in any profitable niche.</p>
-
-  <div class="program-final">
-    <h3>With 4&ndash;6 hours per week on your own project, you'll finish with a validated idea, your first customers, and a clear go-to-market plan</h3>
-    <p>You book a 30-minute call. We look at your situation together, your idea, your timeline, where you are stuck. No pitch, pressure. Afterwards you can decide if our program is what you need or not</p>
-    <a href="#" class="btn-white" data-popup="clarity">Book a free call - see if it's a fit</a>
-  </div>
-</section>
-
-<!-- ===== PACKAGES SECTION ===== -->
-<section class="packages-section" id="packages">
-  <div class="packages-inner">
-    <h2 class="packages-title">Packages</h2>
-    <p class="packages-subtitle">Our structure and mentoring will help you to get a validated idea, your first customers, and a clear go-to-market plan. Just with 8&ndash;10 hours per week.</p>
-    <div class="packages-grid">
-      <!-- Starter -->
-      <div class="package-card">
-        <div class="package-header">
-          <div class="package-name">Starter Program</div>
-          <div class="package-price">&euro;1 590</div>
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="testimonials-header">
+        <h2>What our alumni love</h2>
+        <div class="testimonials-avatars">
+          <img src="assets/images/testimonial-fernando.jpg" alt="" />
+          <img src="assets/images/testimonial-nadzeya.jpg" alt="" />
+          <img src="assets/images/testimonial-bogdan.jpg" alt="" />
+          <img src="assets/team/victoria.jpg" alt="" />
         </div>
-        <p class="package-desc">Best for self-driven professionals who want to follow the 12BRAVE system, attend live sessions, and get community support.</p>
-        <ul class="package-features">
-          <li>Access to all live sessions &amp; materials</li>
-          <li>Shared community</li>
-          <li>Group mentoring sessions</li>
-          <li>Access to a chat with all program mentors</li>
-          <li>3 months access to our paid community for continuous support</li>
-          <li>You can switch to the third one at any time</li>
-        </ul>
-        <a href="#" class="package-cta" data-popup="clarity">Buy now</a>
-        <div class="package-notes">
-          <p>Can be paid from your corporate training or coaching budget</p>
-          <p>Claim the money back from your taxes as an educational expense.</p>
+        <div class="testimonials-rating">
+          <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          5.0
         </div>
       </div>
-      <!-- Accelerated (highlighted) -->
-      <div class="package-card package-highlighted">
-        <div class="package-badge">Recommended</div>
-        <div class="package-header">
-          <div class="package-name">Accelerated program</div>
-          <div class="package-price">&euro;1 990</div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img
+              src="assets/images/testimonial-fernando.jpg"
+              alt="Fernando"
+              class="testimonial-avatar"
+            />
+            <div class="testimonial-author-info">
+              <div class="testimonial-name">Fernando Founar</div>
+              <div class="testimonial-role">
+                Executive MBA, D365 Lead consultant
+              </div>
+            </div>
+            <img
+              src="assets/images/logo-hso.png"
+              alt="HSO"
+              class="testimonial-company-logo"
+            />
+          </div>
+          <div class="testimonial-text">
+            &laquo;Thanks for the push. In just a month I went from "what if" to
+            actually moving on my side business. I've got a name, a landing page
+            and even the first leads&nbsp;&raquo;
+          </div>
         </div>
-        <p class="package-desc">Best for professionals who want 1-1 mentoring, personal feedback, and a clear next-step plan.</p>
-        <ul class="package-features">
-          <li>Everything from Starter Program</li>
-          <li>Personal homework review</li>
-          <li>Four 1-1 mentoring sessions with 12BRAVE founders</li>
-          <li>End-of-program review &amp; next steps call</li>
-          <li>You can switch to the third one at any time</li>
-        </ul>
-        <a href="#" class="package-cta package-cta-highlight" data-popup="clarity">Buy now</a>
-        <div class="package-notes">
-          <p>Can be paid from your corporate training or coaching budget</p>
-          <p>Claim the money back from your taxes as an educational expense.</p>
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img
+              src="assets/images/testimonial-nadzeya.jpg"
+              alt="Nadzeya"
+              class="testimonial-avatar"
+            />
+            <div class="testimonial-author-info">
+              <div class="testimonial-name">Nadzeya Bulakh</div>
+              <div class="testimonial-role">Operational Excellence</div>
+            </div>
+            <img
+              src="assets/images/logo-coface.jpg"
+              alt="Coface"
+              class="testimonial-company-logo"
+            />
+          </div>
+          <div class="testimonial-text">
+            &laquo;The step-by-step guidance I received transformed my vague
+            desire to start a side business into a concrete offering&raquo;
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img
+              src="assets/images/testimonial-bogdan.jpg"
+              alt="Bogdan"
+              class="testimonial-avatar"
+            />
+            <div class="testimonial-author-info">
+              <div class="testimonial-name">Bogdan Arizancu</div>
+              <div class="testimonial-role">Software Developer</div>
+            </div>
+            <img
+              src="assets/images/logo-manhattan-m.png"
+              alt="Manhattan"
+              class="testimonial-company-logo"
+            />
+          </div>
+          <div class="testimonial-text">
+            &laquo;The mentors were amazing...and the peer community. It is
+            honestly exactly what I needed to finally move from just having
+            ideas to actually taking action on them&raquo;
+          </div>
         </div>
       </div>
-      <!-- Partner -->
-      <div class="package-card">
-        <div class="package-header">
-          <div class="package-name">Partner Program</div>
-          <div class="package-price">&euro;4 590</div>
+      <div style="text-align: center">
+        <a href="#" class="view-all-btn">View all</a>
+      </div>
+    </section>
+
+    <!-- ===== REAL SIDE BUSINESSES SLIDER ===== -->
+    <section class="slider-section">
+      <h2>Real Side Businesses<br />Our Alumni Started</h2>
+      <div class="slider-container">
+        <div class="swiper is-prime">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide-card">
+                <img
+                  src="assets/images/slides/lingolyft.webp"
+                  alt="LingoLyft"
+                  class="slide-card-img"
+                />
+                <div class="slide-card-text">
+                  <div class="slide-card-title">LingoLyft</div>
+                  <div class="slide-card-desc">
+                    LingoLyft is a tool for YouTube content creators that
+                    automates the metadata upload and translation to different
+                    languages.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-card">
+                <img
+                  src="assets/images/slides/needless.png"
+                  alt="The Needless"
+                  class="slide-card-img"
+                />
+                <div class="slide-card-text">
+                  <div class="slide-card-title">The Needless</div>
+                  <div class="slide-card-desc">
+                    Personal finance and wealth management tracker
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-card">
+                <img
+                  src="assets/images/slides/whatsapp-bot.webp"
+                  alt="WhatsApp Business Bot"
+                  class="slide-card-img"
+                />
+                <div class="slide-card-text">
+                  <div class="slide-card-title">WhatsApp Business Bot</div>
+                  <div class="slide-card-desc">
+                    WhatsApp full cycle sales communication automation service
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-card">
+                <img
+                  src="assets/images/slides/stagewise.webp"
+                  alt="Stagewise 360"
+                  class="slide-card-img"
+                />
+                <div class="slide-card-text">
+                  <div class="slide-card-title">Stagewise 360</div>
+                  <div class="slide-card-desc">
+                    Personal Leadership coaching communication program for
+                    middle managers to help them transform into influential
+                    leaders
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="package-desc">Best for professionals ready to go all in &mdash; with execution support, personal brand strategy, and direct collaboration with 12BRAVE founders.</p>
-        <ul class="package-features">
-          <li>Everything from Accelerated program</li>
-          <li>2 months of personalized work with us on your project</li>
-          <li>Execution support in sales</li>
-          <li>Personal brand review</li>
-          <li>Linkedin page setup and first content plan</li>
-          <li>12 months access to our paid community for continuous support</li>
-        </ul>
-        <a href="#" class="package-cta" data-popup="clarity">Buy now</a>
-        <div class="package-notes">
-          <p>Can be paid from your corporate training or coaching budget</p>
-          <p>Claim the money back from your taxes as an educational expense.</p>
+      </div>
+      <div class="slider-arrows">
+        <button class="slider-arrow slider-prev">
+          <img src="assets/icons/left-arrow.svg" alt="Previous" />
+        </button>
+        <button class="slider-arrow slider-next">
+          <img src="assets/icons/right-arrow.svg" alt="Next" />
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== MEET YOUR TEAM ===== -->
+    <section class="speaker-section" id="team">
+      <h2 class="speaker-section-title">Meet Your Team</h2>
+      <p class="speaker-subtitle">
+        Our mentors have built successful portfolio careers and share proven
+        strategies and shortcuts to help you launch your side business faster
+        and with confidence.
+      </p>
+      <div class="speaker-grid">
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/victoria.jpg" alt="Victoria Sheer" />
+            <img
+              src="assets/team/victoria-hover.jpg"
+              alt=""
+              class="hover-img"
+            />
+            <a
+              href="https://www.linkedin.com/in/victoriasheer/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Victoria Sheer</div>
+              <div class="speaker-location">Amsterdam</div>
+            </div>
+            <div class="speaker-bio">
+              <p>12+ years in Product Leadership (SAP, Henkel, Aldi Sud).</p>
+              <p>
+                Portfolio Career since 2019 (100+ paid mentorings, 30+
+                trainings, consulting practice, community builder).
+              </p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/ekaterina.jpg" alt="Ekaterina Servetnik" />
+            <img
+              src="assets/team/ekaterina-hover.jpg"
+              alt=""
+              class="hover-img"
+            />
+            <a
+              href="https://www.linkedin.com/in/ekaterina-servetnik/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Ekaterina Servetnik</div>
+              <div class="speaker-location">Dusseldorf</div>
+            </div>
+            <div class="speaker-bio">
+              <p>17+ years in consulting, CX, digital & strategy.</p>
+              <p>
+                Go-to-market advisor for startups & scale-ups (SaaS, AI driven)
+              </p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/florian.jpg" alt="Florian Klein" />
+            <img src="assets/team/florian-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/florianklein"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Florian Klein</div>
+              <div class="speaker-location">Allgau</div>
+            </div>
+            <div class="speaker-bio">
+              <p>Former global head of Strategic Foresight of a Big4 firm.</p>
+              <p>
+                Co-Founder of ananki.ai, world's first automated neural-AI
+                foresight engine.
+              </p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/artem.jpg" alt="Artem Koren" />
+            <img src="assets/team/artem-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/akoren/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Artem Koren</div>
+              <div class="speaker-location">New York City</div>
+            </div>
+            <div class="speaker-bio">
+              <p>Co-founder and Chief Product Officer at Sembly AI (2M ARR)</p>
+              <p>
+                BS in Computer Science (Columbia University) and MBA (NYU Stern)
+              </p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/nils.jpg" alt="Nils Stotz" />
+            <img src="assets/team/nils-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/nilsstotz/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Nils Stotz</div>
+              <div class="speaker-location">Berlin</div>
+            </div>
+            <div class="speaker-bio">
+              <p>Head of Product - Experimentation at Zalando.</p>
+              <p>
+                Published 3 Books. Created 3 Online-Courses with 1,500+ Students
+              </p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/maria.jpg" alt="Maria Ledentsova" />
+            <img src="assets/team/maria-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/marialeden"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Maria Ledentsova</div>
+              <div class="speaker-location">Berlin</div>
+            </div>
+            <div class="speaker-bio">
+              <p>
+                Founding marketer at a design agency - drove 2x+ revenue growth.
+              </p>
+              <p>Grew LinkedIn personal brand to 18k+ followers.</p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/clyde.jpg" alt="Clyde Araujo" />
+            <img src="assets/team/clyde-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/araujoclyde/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Clyde Araujo</div>
+              <div class="speaker-location">Koblenz</div>
+            </div>
+            <div class="speaker-bio">
+              <p>
+                15+ years global business leadership experience at Henkel,
+                Metro, Huawei
+              </p>
+              <p>Startup Advisor on Martech, Data Monetisation and IoT</p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/joao.jpg" alt="Joao Moita" />
+            <img src="assets/team/joao-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/joaomoita/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Joao Moita</div>
+              <div class="speaker-location">Lisbon</div>
+            </div>
+            <div class="speaker-bio">
+              <p>Community Builder and Entrepreneur</p>
+              <p>Founder of Product Weekend community live in 15+ countries</p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/catia.jpg" alt="Catia Nunes" />
+            <img src="assets/team/catia-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/catiacnunes/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Catia Nunes</div>
+              <div class="speaker-location">Lisbon</div>
+            </div>
+            <div class="speaker-bio">
+              <p>
+                Growth and Performance Marketing Leader with over 10 years of
+                experience
+              </p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/ayushman.jpg" alt="Ayushman de Lang-Talwar" />
+            <img
+              src="assets/team/ayushman-hover.jpg"
+              alt=""
+              class="hover-img"
+            />
+            <a
+              href="https://www.linkedin.com/in/ayushmantalwar/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Ayushman de Lang-Talwar</div>
+              <div class="speaker-location">Amsterdam</div>
+            </div>
+            <div class="speaker-bio">
+              <p>Cofounded Hable - accessibility startup (exited)</p>
+              <p>Led multiple products to +&euro;xxM revenue</p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/ruzgar.jpg" alt="Ruzgar Zere" />
+            <img src="assets/team/ruzgar-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/rzere/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Ruzgar Zere</div>
+              <div class="speaker-location">Tallinn</div>
+            </div>
+            <div class="speaker-bio">
+              <p>Built and scaled a B2B SaaS to 350+ paying customers</p>
+              <p>
+                Shipped and operated the product end-to-end as a solo founder
+              </p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/andrey.jpg" alt="Andrey Dyatlov" />
+            <img src="assets/team/andrey-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/thelacker/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Andrey Dyatlov</div>
+              <div class="speaker-location">Paris</div>
+            </div>
+            <div class="speaker-bio">
+              <p>CEO and Founder of Rapid Delivery Analytics</p>
+              <p>
+                His clients include PepsiCo, Unilever, Volkswagen and Ferrero.
+              </p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/elena.jpg" alt="Elena Zhigalina" />
+            <img src="assets/team/elena-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/elena-zhigalina/"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Elena Zhigalina</div>
+              <div class="speaker-location">Madrid</div>
+            </div>
+            <div class="speaker-bio">
+              <p>15+ years in B2C & B2B marketing</p>
+              <p>MBA in Marketing & Innovation. Angel investor and Advisor</p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo">
+            <img src="assets/team/leon.jpg" alt="Leon Wisskirchen" />
+            <img src="assets/team/leon-hover.jpg" alt="" class="hover-img" />
+            <a
+              href="https://www.linkedin.com/in/leon-wisskirchen"
+              class="speaker-linkedin"
+              target="_blank"
+              ><img src="assets/icons/linkedin.svg?v=2" alt="LinkedIn"
+            /></a>
+          </div>
+          <div class="speaker-info">
+            <div class="speaker-name-row">
+              <div class="speaker-name">Leon Wisskirchen</div>
+              <div class="speaker-location">Berlin</div>
+            </div>
+            <div class="speaker-bio">
+              <p>Serial entrepreneur and Velsa Co-Founder & CEO</p>
+              <p>Thought Leader in Legal Tech</p>
+            </div>
+            <span class="speaker-readmore">Read more</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="packages-guarantee">
-      <strong>First Sales Guarantee:</strong> Get up to 6 months of 1:1 coaching, extended free if needed, until you reach first sales.
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===== FAQ ===== -->
-<section class="faq-section">
-  <h2>FAQ</h2>
-  <div class="faq-list">
-    <div class="faq-item active">
-      <div class="faq-question">
-        <span>What will I actually get?</span>
-        <span class="faq-icon"></span>
-      </div>
-      <div class="faq-answer">
-        <p>By the end of the program you will have tested a real idea with real people, had your first conversations with potential clients, and know exactly what you are building and for whom. Most participants get their first paying client during the program. All of them leave knowing their concrete marketing plan, tested.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Will I have time to participate while keeping my main job?</span>
-        <span class="faq-icon"></span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, the program is specifically designed for full-time working professionals. You would need 4 to 6 hours a week to work on your business idea with us. If you have spent the last two years reading about starting a business without actually starting, you are already spending this time. You are just not getting results from it yet.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Is this a "quit your job" program?</span>
-        <span class="faq-icon"></span>
-      </div>
-      <div class="faq-answer">
-        <p>No. You keep your job the entire time. The program is built specifically for people who are not ready to quit and should not have to. You build something real alongside the salary. If at some point you want to make a bigger change, you do it from a position of strength, not a leap of faith.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What if I don't have a clear idea yet?</span>
-        <span class="faq-icon"></span>
-      </div>
-      <div class="faq-answer">
-        <p>Most people who join do not. Some have one idea they have been sitting on for two years. Some arrive with four ideas and no idea which to pursue. Both are completely normal and exactly what the first weeks of the program are designed to resolve. Clarity is something you build inside 12BRAVE, not something you need to arrive with.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Is there a result guarantee?</span>
-        <span class="faq-icon"></span>
-      </div>
-      <div class="faq-answer">
-        <p>If you show up and do the work, you will make progress. That is not a marketing line, it is what the structure is built for. If you ever feel stuck, we offer additional 1-1 coaching at no extra cost until you get your first clients. We only accept people we genuinely believe we can help. That is what the 30-minute call is for.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>I have been thinking about starting something for years and never followed through. What makes this different?</span>
-        <span class="faq-icon"></span>
-      </div>
-      <div class="faq-answer">
-        <p>The structure. Every week has one specific thing to do, a deadline, and a group of people who will notice if you do not do it. The reason most people stay stuck is not lack of ideas or talent. It is lack of a forcing function. That is what 12BRAVE is built to be.</p>
-      </div>
-    </div>
-  </div>
-  <div class="faq-contact">
-    <a href="#">Contact us</a>
-    <p>If you have any further questions, please get in touch</p>
-  </div>
-</section>
+    <!-- ===== PROGRAM SECTION ===== -->
+    <section class="program-section" id="program">
+      <div class="program-tag">100% remote</div>
+      <h2 class="program-title">Weekly Curriculum in Details</h2>
+      <ul class="program-bullets">
+        <li>10 weekly live sessions</li>
+        <li>1-1 mentoring and personal feedback on demand</li>
+        <li>
+          We use every AI shortcut available &mdash; and show you exactly where
+          you still need to do the real work yourself
+        </li>
+      </ul>
 
-<!-- ===== COMMUNITY ===== -->
-<section class="community-section">
-  <div class="community-inner">
-    <div class="community-title">Join our community for<br>mid- & senior-level pros<br><span>to explore portfolio careers<br>and launch side projects</span></div>
-    <div class="community-subtitle">Networking &bull; Workshops &bull; Feedback &bull; Matchmaking</div>
-    <a href="#" class="community-cta">Get your free invite now</a>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer" id="contact">
-  <div class="footer-content">
-    <div class="footer-copy">&copy; 12BRAVE, 2025</div>
-    <div class="footer-right">
-      <div class="footer-col">
-        <a href="#" class="footer-whatsapp">Join WhatsApp group to network <img src="assets/icons/link-arrow.svg" alt=""></a>
-        <div class="footer-col-title">Our social media:</div>
-        <a href="https://www.linkedin.com/company/12brave/" target="_blank">LinkedIn</a>
+      <div class="program-accordion">
+        <div class="program-accord-item active">
+          <div class="program-accord-header">
+            <div class="accord-left">
+              <span class="accord-number">01</span>
+              <span class="accord-phase">FIRST IDEA</span>
+            </div>
+            <div class="accord-right">
+              <span class="accord-duration">1 session</span>
+              <svg
+                class="accord-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+          </div>
+          <div class="program-accord-body">
+            <div class="program-accord-body-inner">
+              <span class="accord-body-text"
+                >Select Your First Idea to Test</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="program-accord-item">
+          <div class="program-accord-header">
+            <div class="accord-left">
+              <span class="accord-number">02</span>
+              <span class="accord-phase">MARKET VALIDATION PROOF</span>
+            </div>
+            <div class="accord-right">
+              <span class="accord-duration">3 sessions</span>
+              <svg
+                class="accord-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+          </div>
+          <div class="program-accord-body">
+            <div class="program-accord-body-inner">
+              <span class="accord-body-text"
+                >Market &amp; Customer Research with AI and your
+                positioning</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="program-accord-item">
+          <div class="program-accord-header">
+            <div class="accord-left">
+              <span class="accord-number">03</span>
+              <span class="accord-phase">OFFER THAT WILL SELL</span>
+            </div>
+            <div class="accord-right">
+              <span class="accord-duration">2 sessions</span>
+              <svg
+                class="accord-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+          </div>
+          <div class="program-accord-body">
+            <div class="program-accord-body-inner">
+              <span class="accord-body-text"
+                >Package your idea into final offering - landing page</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="program-accord-item">
+          <div class="program-accord-header">
+            <div class="accord-left">
+              <span class="accord-number">04</span>
+              <span class="accord-phase">REVENUE SIGNALS</span>
+            </div>
+            <div class="accord-right">
+              <span class="accord-duration">3 sessions</span>
+              <svg
+                class="accord-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+          </div>
+          <div class="program-accord-body">
+            <div class="program-accord-body-inner">
+              <span class="accord-body-text"
+                >Running real market tests and enhancing your offer</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="program-accord-item">
+          <div class="program-accord-header">
+            <div class="accord-left">
+              <span class="accord-number">05</span>
+              <span class="accord-phase">BONUS</span>
+            </div>
+            <div class="accord-right">
+              <span class="accord-duration">1 session</span>
+              <svg
+                class="accord-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+          </div>
+          <div class="program-accord-body">
+            <div class="program-accord-body-inner">
+              <span class="accord-body-text">LinkedIn personal brand</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Documents:</div>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms">Terms & Conditions</a>
+
+      <a href="#" class="program-detail-btn">Detailed curriculum</a>
+      <p class="program-note">
+        Our program covers all key digital business areas - from tech products
+        and communities to online courses, knowledge products, personal brands
+        and agencies, giving you the skills to work in any profitable niche.
+      </p>
+
+      <div class="program-final">
+        <h3>
+          With 4&ndash;6 hours per week on your own project, you'll finish with
+          a validated idea, your first customers, and a clear go-to-market plan
+        </h3>
+        <p>
+          You book a 30-minute call. We look at your situation together, your
+          idea, your timeline, where you are stuck. No pitch, pressure.
+          Afterwards you can decide if our program is what you need or not
+        </p>
+        <a href="#" class="btn-white" data-popup="clarity"
+          >Book a free call - see if it's a fit</a
+        >
+      </div>
+    </section>
+
+    <!-- ===== PACKAGES SECTION ===== -->
+    <section class="packages-section" id="packages">
+      <div class="packages-inner">
+        <h2 class="packages-title">Packages</h2>
+        <p class="packages-subtitle">
+          Our structure and mentoring will help you to get a validated idea,
+          your first customers, and a clear go-to-market plan. Just with
+          8&ndash;10 hours per week.
+        </p>
+        <div class="packages-grid">
+          <!-- Starter -->
+          <div class="package-card">
+            <div class="package-header">
+              <div class="package-name">Starter Program</div>
+              <div class="package-price">&euro;1 590</div>
+            </div>
+            <p class="package-desc">
+              Best for self-driven professionals who want to follow the 12BRAVE
+              system, attend live sessions, and get community support.
+            </p>
+            <ul class="package-features">
+              <li>Access to all live sessions &amp; materials</li>
+              <li>Shared community</li>
+              <li>Group mentoring sessions</li>
+              <li>Access to a chat with all program mentors</li>
+              <li>
+                3 months access to our paid community for continuous support
+              </li>
+              <li>You can switch to the third one at any time</li>
+            </ul>
+            <a href="#" class="package-cta" data-popup="clarity">Buy now</a>
+            <div class="package-notes">
+              <p>Can be paid from your corporate training or coaching budget</p>
+              <p>
+                Claim the money back from your taxes as an educational expense.
+              </p>
+            </div>
+          </div>
+          <!-- Accelerated (highlighted) -->
+          <div class="package-card package-highlighted">
+            <div class="package-badge">Recommended</div>
+            <div class="package-header">
+              <div class="package-name">Accelerated program</div>
+              <div class="package-price">&euro;1 990</div>
+            </div>
+            <p class="package-desc">
+              Best for professionals who want 1-1 mentoring, personal feedback,
+              and a clear next-step plan.
+            </p>
+            <ul class="package-features">
+              <li>Everything from Starter Program</li>
+              <li>Personal homework review</li>
+              <li>Four 1-1 mentoring sessions with 12BRAVE founders</li>
+              <li>End-of-program review &amp; next steps call</li>
+              <li>You can switch to the third one at any time</li>
+            </ul>
+            <a
+              href="#"
+              class="package-cta package-cta-highlight"
+              data-popup="clarity"
+              >Buy now</a
+            >
+            <div class="package-notes">
+              <p>Can be paid from your corporate training or coaching budget</p>
+              <p>
+                Claim the money back from your taxes as an educational expense.
+              </p>
+            </div>
+          </div>
+          <!-- Partner -->
+          <div class="package-card">
+            <div class="package-header">
+              <div class="package-name">Partner Program</div>
+              <div class="package-price">&euro;4 590</div>
+            </div>
+            <p class="package-desc">
+              Best for professionals ready to go all in &mdash; with execution
+              support, personal brand strategy, and direct collaboration with
+              12BRAVE founders.
+            </p>
+            <ul class="package-features">
+              <li>Everything from Accelerated program</li>
+              <li>2 months of personalized work with us on your project</li>
+              <li>Execution support in sales</li>
+              <li>Personal brand review</li>
+              <li>Linkedin page setup and first content plan</li>
+              <li>
+                12 months access to our paid community for continuous support
+              </li>
+            </ul>
+            <a href="#" class="package-cta" data-popup="clarity">Buy now</a>
+            <div class="package-notes">
+              <p>Can be paid from your corporate training or coaching budget</p>
+              <p>
+                Claim the money back from your taxes as an educational expense.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="packages-guarantee">
+          <strong>First Sales Guarantee:</strong> Get up to 6 months of 1:1
+          coaching, extended free if needed, until you reach first sales.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>What will I actually get?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              By the end of the program you will have tested a real idea with
+              real people, had your first conversations with potential clients,
+              and know exactly what you are building and for whom. Most
+              participants get their first paying client during the program. All
+              of them leave knowing their concrete marketing plan, tested.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span
+              >Will I have time to participate while keeping my main job?</span
+            >
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, the program is specifically designed for full-time working
+              professionals. You would need 4 to 6 hours a week to work on your
+              business idea with us. If you have spent the last two years
+              reading about starting a business without actually starting, you
+              are already spending this time. You are just not getting results
+              from it yet.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is this a "quit your job" program?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              No. You keep your job the entire time. The program is built
+              specifically for people who are not ready to quit and should not
+              have to. You build something real alongside the salary. If at some
+              point you want to make a bigger change, you do it from a position
+              of strength, not a leap of faith.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What if I don't have a clear idea yet?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Most people who join do not. Some have one idea they have been
+              sitting on for two years. Some arrive with four ideas and no idea
+              which to pursue. Both are completely normal and exactly what the
+              first weeks of the program are designed to resolve. Clarity is
+              something you build inside 12BRAVE, not something you need to
+              arrive with.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is there a result guarantee?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              If you show up and do the work, you will make progress. That is
+              not a marketing line, it is what the structure is built for. If
+              you ever feel stuck, we offer additional 1-1 coaching at no extra
+              cost until you get your first clients. We only accept people we
+              genuinely believe we can help. That is what the 30-minute call is
+              for.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span
+              >I have been thinking about starting something for years and never
+              followed through. What makes this different?</span
+            >
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              The structure. Every week has one specific thing to do, a
+              deadline, and a group of people who will notice if you do not do
+              it. The reason most people stay stuck is not lack of ideas or
+              talent. It is lack of a forcing function. That is what 12BRAVE is
+              built to be.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-contact">
+        <a href="#">Contact us</a>
+        <p>If you have any further questions, please get in touch</p>
+      </div>
+    </section>
+
+    <!-- ===== COMMUNITY ===== -->
+    <section class="community-section">
+      <div class="community-inner">
+        <div class="community-title">
+          Join our community for<br />mid- & senior-level pros<br /><span
+            >to explore portfolio careers<br />and launch side projects</span
+          >
+        </div>
+        <div class="community-subtitle">
+          Networking &bull; Workshops &bull; Feedback &bull; Matchmaking
+        </div>
+        <a href="#" class="community-cta">Get your free invite now</a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="footer-copy">© 12BRAVE, 2025</div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-whatsapp-row">
+            <a href="#" class="footer-whatsapp-link"
+              >Join WhatsApp group to network</a
+            >
+            <img
+              src="assets/icons/link-arrow.svg"
+              alt=""
+              class="footer-link-icon"
+            />
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Our social media:</div>
+            <div class="footer-links-row">
+              <a
+                href="https://www.linkedin.com/company/12brave/"
+                target="_blank"
+                class="footer-link"
+                >Linkedin</a
+              >
+            </div>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Documents:</div>
+            <div class="footer-links-row">
+              <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+              <a href="/terms" class="footer-link">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bg-text">
+        <img
+          src="assets/footer-12brave.svg"
+          alt="12BRAVE"
+          class="footer-large-logo"
+        />
+      </div>
+    </footer>
+
+    <!-- ===== BOOK A CALL POPUP ===== -->
+    <div class="popup-overlay" id="popup-clarity" style="display: none">
+      <div class="popup-card">
+        <div class="popup-content">
+          <img src="assets/logo.svg" alt="12BRAVE" class="popup-logo" />
+          <div class="popup-title">
+            BOOK A FREE IDEA CLARITY CALL WITH 12BRAVE FOUNDERS
+          </div>
+          <div class="popup-desc">
+            This is a call where we will tell you more about the program and
+            discuss if your case is a good fit. The call is free and a mandatory
+            step before joining the program
+          </div>
+          <div class="calendly-embed">
+            <iframe
+              data-src="https://calendly.com/12brave/new-meeting?hide_event_type_details=1&amp;hide_gdpr_banner=1&amp;primary_color=8238fd"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              title="Select a Date &amp; Time - Calendly"
+            ></iframe>
+          </div>
+        </div>
+        <button class="popup-close" id="popup-close" aria-label="Close">
+          &times;
+        </button>
       </div>
     </div>
-  </div>
-  <div class="footer-logo-bg">
-    <img src="assets/footer-12brave.svg" alt="">
-  </div>
-</footer>
 
-<!-- ===== BOOK A CALL POPUP ===== -->
-<div class="popup-overlay" id="popup-clarity" style="display:none">
-  <div class="popup-card">
-    <div class="popup-content">
-      <img src="assets/logo.svg" alt="12BRAVE" class="popup-logo">
-      <div class="popup-title">BOOK A FREE IDEA CLARITY CALL WITH 12BRAVE FOUNDERS</div>
-      <div class="popup-desc">This is a call where we will tell you more about the program and discuss if your case is a good fit. The call is free and a mandatory step before joining the program</div>
-      <div class="calendly-embed">
-        <iframe data-src="https://calendly.com/12brave/new-meeting?hide_event_type_details=1&amp;hide_gdpr_banner=1&amp;primary_color=8238fd" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe>
-      </div>
-    </div>
-    <button class="popup-close" id="popup-close" aria-label="Close">&times;</button>
-  </div>
-</div>
-
-<!-- ===== SCRIPTS ===== -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="scripts.js?v=4"></script>
-</body>
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="scripts.js?v=4"></script>
+  </body>
 </html>
