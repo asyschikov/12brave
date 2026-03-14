@@ -1186,6 +1186,7 @@ button {
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 12px;
+  height: 360px;
 }
 
 .speaker-photo img {
@@ -2962,6 +2963,7 @@ body.popup-open {
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 1 / 1;
+  height: 360px;
 }
 
 .speaker-popup-photo {
@@ -2972,12 +2974,14 @@ body.popup-open {
 
 .speaker-popup-tags {
   position: absolute;
+
   bottom: 12px;
   left: 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   max-width: calc(100% - 24px);
+  visibility: hidden;
 }
 
 .speaker-popup-tag {

@@ -247,14 +247,14 @@ function initSpeakerPopup() {
     document.body.classList.add('popup-open');
 
     // GSAP Animation
-    gsap.fromTo('.speaker-popup-card',
+    gsap.fromTo(overlay.querySelector('.speaker-popup-card'),
       { opacity: 0, scale: 0.8, y: 50 },
       { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
     );
   }
 
   function closePopup() {
-    gsap.to('.speaker-popup-card', {
+    gsap.to(overlay.querySelector('.speaker-popup-card'), {
       opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
       onComplete: () => {
         overlay.style.display = 'none';
@@ -433,11 +433,11 @@ function initSwiper() {
         spaceBetween: 16
       },
       768: {
-        slidesPerView: 2.2,
+        slidesPerView: 2,
         spaceBetween: 20
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 24
       }
     }
@@ -461,11 +461,22 @@ function initBookCallPopup() {
     }
     overlay.style.display = 'flex';
     document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.popup-card'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
   }
 
   function closePopup() {
-    overlay.style.display = 'none';
-    document.body.classList.remove('popup-open');
+    gsap.to(overlay.querySelector('.popup-card'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
   }
 
   // Wire up all buttons with data-popup="clarity"
@@ -519,6 +530,13 @@ function initAlumniPopup() {
   function openPopup() {
     overlay.style.display = 'flex';
     document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.alumni-popup-card'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
+
     // Update swiper on open to ensure it calculates dimensions correctly
     if (alumniSwiper) {
       alumniSwiper.update();
@@ -526,8 +544,13 @@ function initAlumniPopup() {
   }
 
   function closePopup() {
-    overlay.style.display = 'none';
-    document.body.classList.remove('popup-open');
+    gsap.to(overlay.querySelector('.alumni-popup-card'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
   }
 
   // Trigger button click
@@ -565,11 +588,22 @@ function initContactPopup() {
   function openPopup() {
     overlay.style.display = 'flex';
     document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.contact-popup'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
   }
 
   function closePopup() {
-    overlay.style.display = 'none';
-    document.body.classList.remove('popup-open');
+    gsap.to(overlay.querySelector('.contact-popup'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
   }
 
   triggerBtns.forEach(btn => {
@@ -605,11 +639,22 @@ function initCurriculumPopup() {
   function openPopup() {
     overlay.style.display = 'flex';
     document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.curriculum-popup'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
   }
 
   function closePopup() {
-    overlay.style.display = 'none';
-    document.body.classList.remove('popup-open');
+    gsap.to(overlay.querySelector('.curriculum-popup'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
   }
 
   triggerBtns.forEach(btn => {
