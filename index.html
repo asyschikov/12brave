@@ -734,7 +734,7 @@
         </div>
       </div>
       <div style="text-align: center">
-        <a href="#" class="view-all-btn">View all</a>
+        <a href="#" class="view-all-btn" id="view-all-alumni">View all</a>
       </div>
     </section>
 
@@ -1638,6 +1638,95 @@
         />
       </div>
     </footer>
+
+    <!-- ===== ALUMNI REVIEWS POPUP ===== -->
+    <div class="popup-overlay" id="popup-alumni" style="display: none">
+      <div class="alumni-popup-card">
+        <button
+          class="popup-close alumni-close"
+          id="alumni-close"
+          aria-label="Close"
+        >
+          <img src="assets/alumni/close.svg" alt="Close" />
+        </button>
+        <div class="alumni-slider-container">
+          <div class="swiper alumni-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="assets/alumni/review-1.jpg"
+                  alt="Alumni Review 1"
+                  class="alumni-review-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/alumni/review-2.jpg"
+                  alt="Alumni Review 2"
+                  class="alumni-review-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/alumni/review-3.jpg"
+                  alt="Alumni Review 3"
+                  class="alumni-review-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/alumni/review-4.jpg"
+                  alt="Alumni Review 4"
+                  class="alumni-review-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/alumni/review-5.jpg"
+                  alt="Alumni Review 5"
+                  class="alumni-review-img"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Navigation Arrows -->
+          <button class="alumni-slider-arrow alumni-prev">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button class="alumni-slider-arrow alumni-next">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- ===== BOOK A CALL POPUP ===== -->
     <div class="popup-overlay" id="popup-clarity" style="display: none">

@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initSwiper();
   initBookCallPopup();
+  initAlumniPopup();
 });
 
 /* ================================================================
@@ -206,5 +207,67 @@ function initBookCallPopup() {
   // Escape key to close
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay.style.display === 'flex') closePopup();
+  });
+}
+
+/* ================================================================
+   ALUMNI REVIEWS POPUP
+   ================================================================ */
+function initAlumniPopup() {
+  const overlay = document.getElementById('popup-alumni');
+  const closeBtn = document.getElementById('alumni-close');
+  const triggerBtn = document.getElementById('view-all-alumni');
+
+  if (!overlay || !triggerBtn) return;
+
+  // Initialize Swiper for Alumni Reviews
+  const alumniSwiper = new Swiper('.alumni-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.alumni-next',
+      prevEl: '.alumni-prev',
+    },
+    // Optional: add keyboard navigation
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+  });
+
+  function openPopup() {
+    overlay.style.display = 'flex';
+    document.body.classList.add('popup-open');
+    // Update swiper on open to ensure it calculates dimensions correctly
+    if (alumniSwiper) {
+      alumniSwiper.update();
+    }
+  }
+
+  function closePopup() {
+    overlay.style.display = 'none';
+    document.body.classList.remove('popup-open');
+  }
+
+  // Trigger button click
+  triggerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openPopup();
+  });
+
+  // Close button click
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+  // Click overlay background to close
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.style.display === 'flex') {
+      closePopup();
+    }
   });
 }
