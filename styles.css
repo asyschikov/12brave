@@ -715,7 +715,14 @@ button {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #fff;
-  margin-left: -10px;
+  margin-left: -15px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.testimonials-avatars img:hover {
+  transform: translateY(-5px);
+  z-index: 10;
 }
 
 .testimonials-avatars img:first-child {
@@ -723,16 +730,22 @@ button {
 }
 
 .testimonials-rating {
-  display: flex;
+  grid-column-gap: 10px;
+  flex: 0 auto;
+  justify-content: flex-start;
   align-items: center;
-  gap: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #131313;
+  text-decoration: none;
+  display: flex;
 }
 
 .testimonials-rating img {
-  height: 18px;
+  grid-column-gap: 4px;
+  object-fit: cover;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
 }
 
 .stars-gold {
