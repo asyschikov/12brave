@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  initCurriculumPopup();
   initNavbar();
   initHeroTitleAnimation();
   initHeroTestimonialRotation();
@@ -539,6 +540,46 @@ function initAlumniPopup() {
   });
 
   // Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.style.display === 'flex') {
+      closePopup();
+    }
+  });
+}
+
+/* ================================================================
+   CURRICULUM POPUP
+   ================================================================ */
+function initCurriculumPopup() {
+  const overlay = document.getElementById('popup-curriculum');
+  const closeBtn = document.getElementById('curriculum-close');
+  const triggerBtns = document.querySelectorAll('[data-popup="curriculum"]');
+
+  if (!overlay || triggerBtns.length === 0) return;
+
+  function openPopup() {
+    overlay.style.display = 'flex';
+    document.body.classList.add('popup-open');
+  }
+
+  function closePopup() {
+    overlay.style.display = 'none';
+    document.body.classList.remove('popup-open');
+  }
+
+  triggerBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPopup();
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay.style.display === 'flex') {
       closePopup();

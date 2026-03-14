@@ -1253,8 +1253,8 @@ button {
    PROGRAM SECTION
    ================================================================ */
 .program-section {
-  grid-column-gap: 70px;
-  grid-row-gap: 70px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
   background-color: #8238fd;
   background-image: url('assets/6889f7b15053d2488c0ed746_1-block.png');
   background-position: 50% -310px;
@@ -1264,9 +1264,7 @@ button {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 74px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding: 74px 36px;
   display: flex;
 }
 
@@ -1282,53 +1280,61 @@ button {
 }
 
 .program-title {
-  font-size: 38px;
+  font-size: 64px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 8px;
+  line-height: 100%;
 }
 
 .program-bullets {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .program-bullets li {
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.85);
-  padding: 8px 0;
+  padding: 0;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .program-bullets li::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  flex-shrink: 0;
+  content: '\2022';
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  line-height: 1;
 }
 
 /* Accordion */
 .program-accordion {
+  width: 100%;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .program-accord-item {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 14px;
-  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #8238fd;
+  border-radius: 12px;
   overflow: hidden;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .program-accord-item.active {
-  background: rgba(255, 255, 255, 0.18);
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(130, 56, 253, 0.1);
 }
 
 .program-accord-header {
-  padding: 20px 24px;
+  padding: 24px 32px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1338,117 +1344,184 @@ button {
 .accord-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .accord-number {
-  font-family: 'Nonbureau', Arial, sans-serif;
-  font-size: 26px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.4);
-  min-width: 36px;
+  color: #fff;
+  background-color: #8238fd;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .accord-phase {
-  font-family: 'Nonbureau', Arial, sans-serif;
-  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.5px;
+  color: #fff;
+  background-color: #8238fd;
+  padding: 6px 16px;
+  border-radius: 100px;
+  display: inline-block;
 }
 
 .accord-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
 
 .accord-duration {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  color: #131313;
   font-weight: 500;
+  opacity: 0.6;
+}
+
+.accord-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #8238fd;
+  border: none;
+  position: relative;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accord-button::before,
+.accord-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.accord-button::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.program-accord-item.active .accord-button {
+  transform: rotate(45deg);
 }
 
 .program-accord-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease-out;
 }
 
 .program-accord-item.active .program-accord-body {
-  max-height: 300px;
+  max-height: 500px;
 }
 
 .program-accord-body-inner {
-  padding: 0 24px 20px;
+  padding: 0 32px 32px;
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .accord-body-text {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  color: #131313;
   line-height: 1.5;
-  flex: 1;
+  font-weight: 400;
 }
 
-.accord-chevron {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s;
-  color: rgba(255, 255, 255, 0.5);
+.accord-body-text p {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.program-accord-item.active .accord-chevron {
-  transform: rotate(180deg);
+.accord-body-text p:last-child {
+  margin-bottom: 0;
 }
+
+/* Custom icons for the sections */
+.accord-body-text p::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+/* Default icons for sections */
+.accord-body-text p:nth-child(1)::before { content: '📅'; }
+.accord-body-text p:nth-child(2)::before { content: '🎯'; }
+.accord-body-text p:nth-child(3)::before { content: '📖'; }
+.accord-body-text p:nth-child(4)::before { content: '🎁'; }
+
 
 .program-detail-btn {
   display: inline-block;
   margin-top: 10px;
   margin-bottom: 30px;
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
+  background-color: #fff;
+  color: #131313;
+  border: none;
   border-radius: 100px;
-  padding: 14px 32px;
-  font-size: 16px;
-  font-weight: 500;
+  padding: 16px 44px;
+  font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
-  background: transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .program-detail-btn:hover {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .program-note {
-  font-size: 15px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 700px;
+  text-align: center;
 }
 
 .program-final {
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
   border-radius: 20px;
   padding: 50px;
   text-align: center;
 }
 
 .program-final h3 {
-  font-size: 32px;
+  font-size: 64px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 12px;
+  line-height: 1;
 }
 
 .program-final p {
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin-bottom: 24px;
@@ -2882,4 +2955,107 @@ body.popup-open {
   .speaker-popup-name {
     font-size: 28px;
   }
+}
+
+/* ================================================================
+   CURRICULUM POPUP
+   ================================================================ */
+.curriculum-popup {
+  max-width: 580px;
+  border-radius: 24px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-popup-title {
+  font-family: 'Nonbureau', Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #131313;
+  margin-bottom: 32px;
+  text-align: left;
+  line-height: 1.1;
+  max-width: 400px;
+}
+
+.curriculum-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.curriculum-form input[type="text"],
+.curriculum-form input[type="email"],
+.curriculum-form input[type="tel"] {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Manrope', sans-serif;
+  color: #131313;
+}
+
+.curriculum-form input::placeholder {
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+.curriculum-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.curriculum-checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.curriculum-checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #8238fd;
+}
+
+.curriculum-checkbox-group label a {
+  color: #8238fd;
+  text-decoration: underline;
+}
+
+.curriculum-submit-btn {
+  background-color: #8238fd;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(130, 56, 253, 0.2);
+}
+
+.curriculum-submit-btn:hover {
+  background-color: #6a2cd4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(130, 56, 253, 0.3);
+}
+
+#curriculum-close {
+  top: 30px;
+  right: 30px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
 }
