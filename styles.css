@@ -67,6 +67,26 @@ button {
   cursor: pointer;
 }
 
+/* === SKIP NAV === */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100000;
+  background: #8a4dff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 0 0 8px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-nav:focus {
+  top: 0;
+}
+
 /* === UTILITY === */
 .container {
   max-width: 100%;
