@@ -1,0 +1,572 @@
+/* ================================================================
+   12BRAVE Legal Pages – Stylesheet
+   Font: Manrope | Primary: #8238fd | Dark: #131313
+   ================================================================ */
+
+/* === FONTS === */
+@font-face {
+  font-family: 'Nonbureau';
+  src: url('../assets/fonts/NonBureau-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === RESET === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: #333;
+  background: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Nonbureau', Arial, sans-serif;
+  color: #131313;
+  font-weight: 600;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ================================================================
+   NAVBAR
+   ================================================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transition: background 0.3s, backdrop-filter 0.3s;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar-inner {
+  width: 100%;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.nav-logo img {
+  width: 108px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 1.75rem;
+  padding: 0.75rem 1.75rem;
+}
+
+.nav-links a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #131313;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #8238fd;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  background: #131313;
+  color: #fff;
+  border-radius: 27px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.2s;
+  border: none;
+}
+
+.nav-cta:hover {
+  background-color: #8238fd;
+}
+
+/* ================================================================
+   LEGAL PAGE CONTENT
+   ================================================================ */
+.legal-page {
+  width: 100%;
+  padding: 140px 50px 100px;
+}
+
+.legal-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-title {
+  font-family: 'Nonbureau', Arial, sans-serif;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #131313;
+  margin-bottom: 12px;
+}
+
+.legal-updated {
+  font-size: 14px;
+  color: rgba(19, 19, 19, 0.4);
+  margin-bottom: 48px;
+}
+
+.legal-section {
+  margin-bottom: 40px;
+}
+
+.legal-section h2 {
+  font-family: 'Nonbureau', Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #131313;
+  margin-bottom: 16px;
+}
+
+.legal-section h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #131313;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.legal-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section ul {
+  list-style: disc;
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.legal-section ul li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.legal-section a {
+  color: #8238fd;
+  text-decoration: underline;
+}
+
+.legal-section a:hover {
+  opacity: 0.8;
+}
+
+.legal-note {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(19, 19, 19, 0.4);
+  font-style: italic;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #eee;
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.footer {
+  background: #8238fd;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  padding: 80px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 50px;
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 0 50px;
+}
+
+.footer-copy {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.2;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 569px;
+}
+
+.footer-whatsapp {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer-whatsapp span {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 22px;
+}
+
+.footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-label {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.2;
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-links a {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2;
+  text-decoration: underline;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 1440px;
+  align-self: center;
+}
+
+/* ================================================================
+   POPUP
+   ================================================================ */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  overflow-y: auto;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-card {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-logo {
+  height: 28px;
+  width: auto;
+  margin-bottom: 24px;
+}
+
+.popup-title {
+  font-family: 'Nonbureau', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #131313;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.popup-desc {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.calendly-embed {
+  width: 100%;
+  height: 660px;
+  min-width: 320px;
+}
+
+.calendly-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.popup-close:hover {
+  background: #f5f5f5;
+}
+
+body.popup-open {
+  overflow: hidden;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 991px) {
+  .navbar-inner {
+    padding: 0 30px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .legal-page {
+    padding: 120px 30px 80px;
+  }
+
+  .legal-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+
+  .legal-page {
+    padding: 100px 16px 60px;
+  }
+
+  .legal-title {
+    font-size: 28px;
+  }
+
+  .legal-section h2 {
+    font-size: 20px;
+  }
+
+  .legal-section p,
+  .legal-section ul li {
+    font-size: 15px;
+  }
+
+  .footer {
+    padding: 40px 0 0;
+    gap: 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  .footer-left {
+    padding: 0;
+  }
+
+  .footer-copy,
+  .footer-label,
+  .footer-links a {
+    font-size: 18px;
+  }
+
+  .footer-whatsapp span {
+    font-size: 18px;
+  }
+}
+
+/* ================================================================
+   COOKIE BANNER
+   ================================================================ */
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99998;
+  background: rgba(19, 19, 19, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px 50px;
+  justify-content: center;
+}
+
+.cookie-banner-inner {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.cookie-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  flex: 1;
+}
+
+.cookie-text a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.cookie-text a:hover {
+  color: #c4a0ff;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 10px 28px;
+  border-radius: 100px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.cookie-btn:hover {
+  opacity: 0.85;
+}
+
+.cookie-btn-accept {
+  background: #8238fd;
+  color: #fff;
+}
+
+.cookie-btn-reject {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .cookie-banner {
+    padding: 20px 16px;
+  }
+
+  .cookie-banner-inner {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}

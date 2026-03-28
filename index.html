@@ -4,6 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Side Business Course for Professionals | 12BRAVE Program</title>
+    <!-- Google Consent Mode v2 (default: denied) -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+    if (localStorage.getItem('cookie_consent') === 'accepted') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+    }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W3VKWVWC');</script>
+    <!-- End Google Tag Manager -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
@@ -17,6 +43,11 @@
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3VKWVWC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar" id="navbar">
       <div class="navbar-inner">
@@ -2114,5 +2145,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="scripts.js?v=4"></script>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookie-banner">
+      <div class="cookie-banner-inner">
+        <p class="cookie-text">We use cookies to improve your experience and analyze site traffic. By clicking "Accept", you consent to our use of cookies. <a href="/privacy-policy">Privacy Policy</a></p>
+        <div class="cookie-buttons">
+          <button class="cookie-btn cookie-btn-reject" id="cookie-reject">Reject</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept</button>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function(){
+      var banner = document.getElementById('cookie-banner');
+      if (!banner || localStorage.getItem('cookie_consent')) return;
+      banner.style.display = 'flex';
+      document.getElementById('cookie-accept').addEventListener('click', function(){
+        localStorage.setItem('cookie_consent', 'accepted');
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+        banner.style.display = 'none';
+      });
+      document.getElementById('cookie-reject').addEventListener('click', function(){
+        localStorage.setItem('cookie_consent', 'rejected');
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
   </body>
 </html>
