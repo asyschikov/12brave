@@ -6,6 +6,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  initCurriculumPopup();
+  initContactPopup();
   initNavbar();
   initHeroTitleAnimation();
   initHeroTestimonialRotation();
@@ -14,7 +16,275 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initSwiper();
   initBookCallPopup();
+  initAlumniPopup();
+  initSpeakerPopup();
 });
+
+/* ================================================================
+   SPEAKER POPUP
+   ================================================================ */
+function initSpeakerPopup() {
+  const overlay = document.getElementById('popup-speaker');
+  const closeBtn = document.getElementById('speaker-close');
+  if (!overlay) return;
+
+  const speakerData = {
+    'Victoria Sheer': {
+      image: 'assets/team/victoria.jpg',
+      location: 'Amsterdam',
+      tagline: '12+ years in Product Leadership (SAP, Henkel, Aldi Sud).',
+      tags: ['Program Founder', 'Marketing'],
+      bio: [
+        '12+ years in Product Leadership (SAP, Henkel, Aldi Sud).',
+        'Portfolio Career since 2019 (100+ paid mentorings, 30+ trainings, consulting practice, community builder).',
+        'Expert in product strategy and organizational design.',
+        'Helped 50+ startups define their product-market fit.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/victoriasheer/'
+    },
+    'Ekaterina Servetnik': {
+      image: 'assets/team/ekaterina.jpg',
+      location: 'Dusseldorf',
+      tagline: '17+ years in consulting, CX, digital & strategy.',
+      tags: ['Program Founder', 'IT'],
+      bio: [
+        '17+ years in consulting, CX, digital & strategy.',
+        'Go-to-market advisor for startups & scale-ups (SaaS, AI driven)',
+        'Expert in customer experience and digital transformation.',
+        'Advisor for multiple successful European startups.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/ekaterina-servetnik/'
+    },
+    'Florian Klein': {
+      image: 'assets/team/florian.jpg',
+      location: 'Allgäu',
+      tagline: 'Senior strategist guiding leaders through uncertainty with AI foresight.',
+      tags: ['Expert', 'Strategy', 'AI'],
+      bio: [
+        'Managing Partner and Co-Founder of <a href="https://ananki.ai" target="_blank">ananki.ai</a>, world\'s first automated neural-AI foresight engine',
+        'Strategist and advisor, former global head of Strategic Foresight of a Big4 firm',
+        'Founder of the Deloitte Center for the Long View, <a href="https://gnosis.ai" target="_blank">Gnosis.ai</a>, and the Deloitte Futures Institute',
+        'Author, lead facilitator, keynote speaker',
+        'PhD Env. Economics, MBA, MA in in Development Studies'
+      ],
+      linkedin: 'https://www.linkedin.com/in/florianklein'
+    },
+    'Artem Koren': {
+      image: 'assets/team/artem.jpg',
+      location: 'New York City',
+      tagline: 'Co-founder and Chief Product Officer at Sembly AI (2M ARR)',
+      tags: ['StartUp', 'AIFounder', 'Future of Work'],
+      bio: [
+        'Co-founder and Chief Product Officer at Sembly AI (2M ARR)',
+        'BS in Computer Science (Columbia University) and MBA (NYU Stern)',
+        'Expert in AI product development and scaling SaaS businesses.',
+        'Passionate about the intersection of technology and human productivity.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/akoren/'
+    },
+    'Nils Stotz': {
+      image: 'assets/team/nils.jpg',
+      location: 'Berlin',
+      tagline: 'Head of Product - Experimentation at Zalando.',
+      tags: ['Expert', 'Personal Brand'],
+      bio: [
+        'Head of Product - Experimentation at Zalando.',
+        'Published 3 Books. Created 3 Online-Courses with 1,500+ Students',
+        'Expert in product-led growth and data-driven decision making.',
+        'Speaker at major product management conferences.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/nilsstotz/'
+    },
+    'Maria Ledentsova': {
+      image: 'assets/team/maria.jpg',
+      location: 'Berlin',
+      tagline: 'Founding marketer at a design agency - drove 2x+ revenue growth.',
+      tags: ['Expert', 'Marketing'],
+      bio: [
+        'Founding marketer at a design agency - drove 2x+ revenue growth.',
+        'Grew LinkedIn personal brand to 18k+ followers.',
+        'Expert in content strategy and organic growth.',
+        'Helps founders build their authority on social media.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/marialeden'
+    },
+    'Clyde Araujo': {
+      image: 'assets/team/clyde.jpg',
+      location: 'Koblenz',
+      tagline: '15+ years global business leadership experience at Henkel, Metro, Huawei',
+      tags: ['B2B', 'Executive'],
+      bio: [
+        '15+ years global business leadership experience at Henkel, Metro, Huawei',
+        'Startup Advisor on Martech, Data Monetisation and IoT',
+        'Expert in international business expansion and strategic partnerships.',
+        'Mentor for early-stage B2B technology companies.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/araujoclyde/'
+    },
+    'Joao Moita': {
+      image: 'assets/team/joao.jpg',
+      location: 'Lisbon',
+      tagline: 'Community Builder and Entrepreneur',
+      tags: ['Expert', 'Community Builder'],
+      bio: [
+        'Community Builder and Entrepreneur',
+        'Founder of Product Weekend community live in 15+ countries',
+        'Expert in community-led growth and event management.',
+        'Passionate about connecting product people globally.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/joaomoita/'
+    },
+    'Catia Nunes': {
+      image: 'assets/team/catia.jpg',
+      location: 'Lisbon',
+      tagline: 'Growth and Performance Marketing Leader with over 10 years of experience',
+      tags: ['Marketing', 'CMO'],
+      bio: [
+        'Growth and Performance Marketing Leader with over 10 years of experience',
+        'Expert in performance marketing and acquisition strategy.',
+        'Helped multiple startups scale their user base efficiently.',
+        'Focused on data-driven growth experiments.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/catiacnunes/'
+    },
+    'Ayushman de Lang-Talwar': {
+      image: 'assets/team/ayushman.jpg',
+      location: 'Amsterdam',
+      tagline: 'Cofounded Hable - accessibility startup (exited)',
+      tags: ['FinTech', 'Founder'],
+      bio: [
+        'Cofounded Hable - accessibility startup (exited)',
+        'Led multiple products to +€xxM revenue',
+        'Expert in product strategy and fundraising for social impact.',
+        'Experienced in taking hardware and software products to market.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/ayushmantalwar/'
+    },
+    'Ruzgar Zere': {
+      image: 'assets/team/ruzgar.jpg',
+      location: 'Tallinn',
+      tagline: 'Built and scaled a B2B SaaS to 350+ paying customers',
+      tags: ['Founder', 'MarTech'],
+      bio: [
+        'Built and scaled a B2B SaaS to 350+ paying customers',
+        'Shipped and operated the product end-to-end as a solo founder',
+        'Expert in lean startup methodology and bootstrapping.',
+        'Hands-on experience in full-stack product development.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/rzere/'
+    },
+    'Andrey Dyatlov': {
+      image: 'assets/team/andrey.jpg',
+      location: 'Paris',
+      tagline: 'CEO and Founder of Rapid Delivery Analytics',
+      tags: ['StartUp', 'ScalingUp', 'FMCG'],
+      bio: [
+        'CEO and Founder of Rapid Delivery Analytics',
+        'His clients include PepsiCo, Unilever, Volkswagen and Ferrero.',
+        'Expert in delivery analytics and supply chain optimization.',
+        'Strategic consultant for global consumer goods companies.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/thelacker/'
+    },
+    'Elena Zhigalina': {
+      image: 'assets/team/elena.jpg',
+      location: 'Madrid',
+      tagline: '15+ years in B2C & B2B marketing',
+      tags: ['Marketing', 'Investor', 'Advisor'],
+      bio: [
+        '15+ years in B2C & B2B marketing',
+        'MBA in Marketing & Innovation. Angel investor and Advisor',
+        'Expert in brand positioning and innovation strategy.',
+        'Experienced advisor for early-stage consumer startups.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/elena-zhigalina/'
+    },
+    'Leon Wisskirchen': {
+      image: 'assets/team/leon.jpg',
+      location: 'Berlin',
+      tagline: 'Serial entrepreneur and Velsa Co-Founder & CEO',
+      tags: ['Entrepreneur', 'Legal Tech', 'CEO'],
+      bio: [
+        'Serial entrepreneur and Velsa Co-Founder & CEO',
+        'Thought Leader in Legal Tech',
+        'Expert in legal technology innovation and scaling startups.',
+        'Advocate for digital transformation in the legal industry.'
+      ],
+      linkedin: 'https://www.linkedin.com/in/leon-wisskirchen'
+    }
+  };
+
+  function openPopup(name) {
+    const data = speakerData[name];
+    if (!data) return;
+
+    document.getElementById('speaker-popup-img').src = data.image;
+    document.getElementById('speaker-popup-name').textContent = name;
+    document.getElementById('speaker-popup-loc').textContent = data.location;
+    document.getElementById('speaker-popup-tagline').textContent = data.tagline;
+    document.getElementById('speaker-popup-linkedin').href = data.linkedin;
+
+    // Tags
+    const tagsContainer = document.getElementById('speaker-popup-tags');
+    tagsContainer.innerHTML = '';
+    data.tags.forEach(tag => {
+      const span = document.createElement('span');
+      span.className = 'speaker-popup-tag';
+      span.textContent = tag;
+      tagsContainer.appendChild(span);
+    });
+
+    // Bio
+    const bioContainer = document.getElementById('speaker-popup-bio');
+    bioContainer.innerHTML = '';
+    data.bio.forEach(point => {
+      const li = document.createElement('li');
+      li.innerHTML = point;
+      bioContainer.appendChild(li);
+    });
+
+    overlay.style.display = 'flex';
+    document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.speaker-popup-card'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
+  }
+
+  function closePopup() {
+    gsap.to(overlay.querySelector('.speaker-popup-card'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
+  }
+
+  // Wire up buttons
+  document.querySelectorAll('.speaker-readmore').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const speakerName = btn.getAttribute('data-speaker');
+      openPopup(speakerName);
+    });
+  });
+
+  // Close button
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+  // Overlay click
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
+  // Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.style.display === 'flex') closePopup();
+  });
+}
 
 /* ================================================================
    NAVBAR – Scroll background effect
@@ -158,7 +428,18 @@ function initSwiper() {
       prevEl: '.slider-prev'
     },
     breakpoints: {
-      480: { slidesPerView: 2 }
+      480: {
+        slidesPerView: 1.2,
+        spaceBetween: 16
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      }
     }
   });
 }
@@ -180,11 +461,22 @@ function initBookCallPopup() {
     }
     overlay.style.display = 'flex';
     document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.popup-card'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
   }
 
   function closePopup() {
-    overlay.style.display = 'none';
-    document.body.classList.remove('popup-open');
+    gsap.to(overlay.querySelector('.popup-card'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
   }
 
   // Wire up all buttons with data-popup="clarity"
@@ -206,5 +498,181 @@ function initBookCallPopup() {
   // Escape key to close
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay.style.display === 'flex') closePopup();
+  });
+}
+
+/* ================================================================
+   ALUMNI REVIEWS POPUP
+   ================================================================ */
+function initAlumniPopup() {
+  const overlay = document.getElementById('popup-alumni');
+  const closeBtn = document.getElementById('alumni-close');
+  const triggerBtn = document.getElementById('view-all-alumni');
+
+  if (!overlay || !triggerBtn) return;
+
+  // Initialize Swiper for Alumni Reviews
+  const alumniSwiper = new Swiper('.alumni-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.alumni-next',
+      prevEl: '.alumni-prev',
+    },
+    // Optional: add keyboard navigation
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+  });
+
+  function openPopup() {
+    overlay.style.display = 'flex';
+    document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.alumni-popup-card'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
+
+    // Update swiper on open to ensure it calculates dimensions correctly
+    if (alumniSwiper) {
+      alumniSwiper.update();
+    }
+  }
+
+  function closePopup() {
+    gsap.to(overlay.querySelector('.alumni-popup-card'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
+  }
+
+  // Trigger button click
+  triggerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openPopup();
+  });
+
+  // Close button click
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+  // Click overlay background to close
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.style.display === 'flex') {
+      closePopup();
+    }
+  });
+}
+
+/* ================================================================
+   CONTACT POPUP
+   ================================================================ */
+function initContactPopup() {
+  const overlay = document.getElementById('popup-contact');
+  const closeBtn = document.getElementById('contact-close');
+  const triggerBtns = document.querySelectorAll('[data-popup="contact"]');
+
+  if (!overlay || triggerBtns.length === 0) return;
+
+  function openPopup() {
+    overlay.style.display = 'flex';
+    document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.contact-popup'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
+  }
+
+  function closePopup() {
+    gsap.to(overlay.querySelector('.contact-popup'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
+  }
+
+  triggerBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPopup();
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.style.display === 'flex') {
+      closePopup();
+    }
+  });
+}
+
+/* ================================================================
+   CURRICULUM POPUP
+   ================================================================ */
+function initCurriculumPopup() {
+  const overlay = document.getElementById('popup-curriculum');
+  const closeBtn = document.getElementById('curriculum-close');
+  const triggerBtns = document.querySelectorAll('[data-popup="curriculum"]');
+
+  if (!overlay || triggerBtns.length === 0) return;
+
+  function openPopup() {
+    overlay.style.display = 'flex';
+    document.body.classList.add('popup-open');
+
+    // GSAP Animation
+    gsap.fromTo(overlay.querySelector('.curriculum-popup'),
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }
+    );
+  }
+
+  function closePopup() {
+    gsap.to(overlay.querySelector('.curriculum-popup'), {
+      opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in',
+      onComplete: () => {
+        overlay.style.display = 'none';
+        document.body.classList.remove('popup-open');
+      }
+    });
+  }
+
+  triggerBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPopup();
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.style.display === 'flex') {
+      closePopup();
+    }
   });
 }
